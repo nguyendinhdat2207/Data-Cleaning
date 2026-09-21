@@ -1,0 +1,82 @@
+
+======================================================================
+Duplicate customer_id rows — are they exact dupes or conflicting?
+======================================================================
+-- C0038 (2 rows) --
+   {'customer_id': 'C0038', 'name': 'Đặng Hùng', 'email': 'đặng.hùng252@example.com', 'phone': '0985669748', 'gender': 'male', 'birth_date': '29/01/1984', 'province': 'Quang Ninh', 'registration_date': '2024-11-26'}
+   {'customer_id': 'C0038', 'name': 'Đặng Hùng', 'email': 'đặng.hùng252@example.com', 'phone': '0985669748', 'gender': 'male', 'birth_date': '29/01/1984', 'province': 'Quang Ninh', 'registration_date': '2024-11-26'}
+-- C0131 (2 rows) --
+   {'customer_id': 'C0131', 'name': 'Nguyễn Linh', 'email': 'nguyễn.linh590@example.com', 'phone': '+84980457719', 'gender': 'female', 'birth_date': '1981-01-03', 'province': 'Bắc Ninh', 'registration_date': '2026-04-15'}
+   {'customer_id': 'C0131', 'name': 'Nguyễn Linh', 'email': 'nguyễn.linh590@example.com', 'phone': '+84980457719', 'gender': 'female', 'birth_date': '1981-01-03', 'province': 'Bắc Ninh', 'registration_date': '2026-04-15'}
+-- C0192 (2 rows) --
+   {'customer_id': 'C0192', 'name': 'Bùi Minh', 'email': 'bùi.minh349@example.com', 'phone': '0914 022 509', 'gender': 'M', 'birth_date': '27/01/1978', 'province': 'Ho Chi Minh City', 'registration_date': '2026-04-05'}
+   {'customer_id': 'C0192', 'name': 'Bùi Minh', 'email': 'bùi.minh349@example.com', 'phone': '0914 022 509', 'gender': 'M', 'birth_date': '27/01/1978', 'province': 'Ho Chi Minh City', 'registration_date': '2026-04-05'}
+-- C0240 (2 rows) --
+   {'customer_id': 'C0240', 'name': 'Hoàng Trang', 'email': 'hoàng.trang599@example.com', 'phone': '+84919097102', 'gender': 'Male', 'birth_date': '15/09/1983', 'province': 'Ho Chi Minh', 'registration_date': '2024-05-13'}
+   {'customer_id': 'C0240', 'name': 'Hoàng Trang', 'email': 'hoàng.trang599@example.com', 'phone': '+84919097102', 'gender': 'Male', 'birth_date': '15/09/1983', 'province': 'Ho Chi Minh', 'registration_date': '2024-05-13'}
+-- C0292 (2 rows) --
+   {'customer_id': 'C0292', 'name': 'Bùi Hà', 'email': 'bùi.hà661@example.com', 'phone': '0937246397', 'gender': 'Female', 'birth_date': '1965-05-21', 'province': 'DN', 'registration_date': '2024-03-02'}
+   {'customer_id': 'C0292', 'name': 'Bùi Hà', 'email': 'bùi.hà661@example.com', 'phone': '0937246397', 'gender': 'Female', 'birth_date': '1965-05-21', 'province': 'DN', 'registration_date': '2024-03-02'}
+-- C0421 (2 rows) --
+   {'customer_id': 'C0421', 'name': 'Hoàng Nga', 'email': 'hoàng.nga959@example.com', 'phone': '0981883939', 'gender': 'male', 'birth_date': '1982-12-04', 'province': 'Ha Noi', 'registration_date': '2024-11-04'}
+   {'customer_id': 'C0421', 'name': 'Hoàng Nga', 'email': 'hoàng.nga959@example.com', 'phone': '0981883939', 'gender': 'male', 'birth_date': '1982-12-04', 'province': 'Ha Noi', 'registration_date': '2024-11-04'}
+
+======================================================================
+birth_date sanity: parse both formats, check range
+======================================================================
+birth_date issues: 3
+  ('C0213', '2030-01-01', 'future')
+  ('C0299', '1890-01-01', 'too old')
+  ('C0325', '31/02/2001', 'unparseable')
+
+======================================================================
+MM/DD/YYYY vs DD/MM/YYYY ambiguity check (day>12 disambiguates)
+======================================================================
+Counter({'both<=12 ambiguous': 116, 'first>12 => DD/MM/YYYY': 112, 'second>12 => MM/DD/YYYY': 88})
+Counter({'order:both<=12 ambiguous': 418, 'order:first>12 => DD/MM/YYYY': 311, 'order:second>12 => MM/DD/YYYY': 259, 'both<=12 ambiguous': 116, 'first>12 => DD/MM/YYYY': 112, 'second>12 => MM/DD/YYYY': 88})
+
+======================================================================
+Duplicate/blank order_id rows in orders.csv
+======================================================================
+-- '' (3 rows) --
+   {'order_id': '', 'customer_id': 'C0435', 'order_date': '2025-08-19', 'status': 'pending', 'total_amount': '0.0'}
+   {'order_id': '', 'customer_id': 'C0265', 'order_date': '10/07/2025', 'status': 'In Progress', 'total_amount': '0.0'}
+   {'order_id': '', 'customer_id': 'C0129', 'order_date': '2025-10-16', 'status': 'Pending', 'total_amount': '0.0'}
+-- 'O00472' (2 rows) --
+   {'order_id': 'O00472', 'customer_id': 'C0348', 'order_date': '10/20/2025', 'status': 'Processing', 'total_amount': '19724000.0'}
+   {'order_id': 'O00472', 'customer_id': 'C0348', 'order_date': '10/20/2025', 'status': 'Processing', 'total_amount': '19724000.0'}
+-- 'O00548' (2 rows) --
+   {'order_id': 'O00548', 'customer_id': 'C0292', 'order_date': '09/05/2025', 'status': 'In Progress', 'total_amount': '12481000.0'}
+   {'order_id': 'O00548', 'customer_id': 'C0292', 'order_date': '09/05/2025', 'status': 'In Progress', 'total_amount': '12481000.0'}
+-- 'O00639' (2 rows) --
+   {'order_id': 'O00639', 'customer_id': 'C0097', 'order_date': '07/24/2025', 'status': 'pending', 'total_amount': '28806000.0'}
+   {'order_id': 'O00639', 'customer_id': 'C0097', 'order_date': '07/24/2025', 'status': 'pending', 'total_amount': '28806000.0'}
+-- 'O00713' (2 rows) --
+   {'order_id': 'O00713', 'customer_id': 'C0218', 'order_date': '04/06/2025', 'status': 'completed', 'total_amount': '13230000.0'}
+   {'order_id': 'O00713', 'customer_id': 'C0218', 'order_date': '04/06/2025', 'status': 'completed', 'total_amount': '13230000.0'}
+-- 'O00985' (2 rows) --
+   {'order_id': 'O00985', 'customer_id': 'C0402', 'order_date': '04/04/2026', 'status': 'Pending', 'total_amount': '48685000.0'}
+   {'order_id': 'O00985', 'customer_id': 'C0402', 'order_date': '04/04/2026', 'status': 'Pending', 'total_amount': '48685000.0'}
+
+======================================================================
+registration_date vs birth_date / order_date range
+======================================================================
+min/max registration_date: 2024-01-02 2026-06-18
+order_date range: 2025-01-02 00:00:00 2026-12-09 00:00:00
+
+======================================================================
+Sample rows with missing email/province
+======================================================================
+{'customer_id': 'C0067', 'name': 'Trần Lan', 'email': 'trần.lan257@example.com', 'phone': '0972831908', 'gender': 'Female', 'birth_date': '12/24/1972', 'province': '', 'registration_date': '2024-05-13'}
+{'customer_id': 'C0069', 'name': 'Phạm Bình', 'email': '', 'phone': '+84987854904', 'gender': 'Nữ', 'birth_date': '1996-01-12', 'province': 'Bac Ninh', 'registration_date': '2025-03-12'}
+{'customer_id': 'C0074', 'name': 'Hoàng An', 'email': '', 'phone': '0912793116', 'gender': 'Female', 'birth_date': '03/30/1966', 'province': 'BN', 'registration_date': '2024-05-25'}
+{'customer_id': 'C0085', 'name': 'Đặng Hà', 'email': '', 'phone': '0977 056 317', 'gender': 'female', 'birth_date': '1968-05-20', 'province': 'Bắc Ninh', 'registration_date': '2025-10-23'}
+{'customer_id': 'C0125', 'name': 'Bùi Nga', 'email': '', 'phone': '0967 978 876', 'gender': 'female', 'birth_date': '1967-05-06', 'province': 'HP', 'registration_date': '2025-06-22'}
+{'customer_id': 'C0195', 'name': 'Nguyễn Phương', 'email': 'unknown', 'phone': '0970699259', 'gender': 'female', 'birth_date': '13/08/1972', 'province': '', 'registration_date': '2024-12-05'}
+{'customer_id': 'C0238', 'name': 'Vũ Trang', 'email': 'vũ.trang49@example.com', 'phone': '+84906652635', 'gender': 'Nam', 'birth_date': '21/10/1985', 'province': '', 'registration_date': '2025-12-10'}
+{'customer_id': 'C0307', 'name': 'Phạm Linh', 'email': 'phạm.linh353@example.com', 'phone': '0910 739 064', 'gender': 'Male', 'birth_date': '01/04/1991', 'province': '', 'registration_date': '2024-07-14'}
+{'customer_id': 'C0346', 'name': 'Đỗ Lan', 'email': 'đỗ.lan74@example.com', 'phone': '0981 158 342', 'gender': 'Male', 'birth_date': '1971-04-06', 'province': '', 'registration_date': '2024-05-17'}
+{'customer_id': 'C0362', 'name': 'Nguyễn Phương', 'email': '', 'phone': '+84988459364', 'gender': 'Female', 'birth_date': '18/02/1968', 'province': 'Cần Thơ', 'registration_date': '2025-01-09'}
+{'customer_id': 'C0395', 'name': 'Nguyễn Minh', 'email': '', 'phone': '0935 957 107', 'gender': 'male', 'birth_date': '10/12/1988', 'province': '', 'registration_date': '2026-06-12'}
+{'customer_id': 'C0451', 'name': 'Đỗ Dũng', 'email': '', 'phone': '+84916891245', 'gender': 'M', 'birth_date': '1968-11-27', 'province': 'Bac Ninh', 'registration_date': '2024-06-06'}
+{'customer_id': 'C0495', 'name': 'Vũ Bình', 'email': 'vũ.bình734@example.com', 'phone': '0972 133 862', 'gender': 'male', 'birth_date': '1972-05-14', 'province': '', 'registration_date': '2026-05-25'}

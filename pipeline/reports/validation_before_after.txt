@@ -1,0 +1,41 @@
+
+--- CUSTOMERS ---
+  metric                                      before       after
+  rows                                           506         500
+  duplicate customer_id                            6           0
+  gender not in {Male,Female}                    379           0
+  email present but invalid format                16           0
+  phone not 0XXXXXXXXX                           353           0
+  distinct province spellings                     27           7
+  birth_date not ISO / non-empty invalid         316           0
+  email missing (blank)                            7          23
+  province missing (blank)                         7          15
+
+--- PRODUCTS ---
+  metric                           before       after
+  rows                                100         100
+  price missing                         5           8
+  price <=0 / non-numeric               3           0
+  distinct category spellings           9           6
+
+--- ORDERS ---
+  metric                                 before       after
+  rows                                     1505        1485
+  duplicate order_id                          7           0
+  blank order_id                              3           0
+  orphan customer_id (FK violation)          12           0
+  distinct status spellings                   8           4
+  order_date not ISO                        988           0
+
+--- ORDER_ITEMS ---
+  metric                                before       after
+  rows                                    3776        3710
+  orphan order_id (FK violation)             6           0
+  orphan product_id (FK violation)          10           0
+  quantity not positive integer             12           0
+  unit_price <=0 / non-numeric               5           0
+  exact-duplicate rows                       6           0
+
+--- TOTALS ---
+  metric                                             before       after
+  orders where total_amount != sum(order_items)          45           0

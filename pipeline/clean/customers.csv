@@ -1,0 +1,501 @@
+customer_id,name,email,phone,gender,birth_date,province,registration_date,birth_date_format_note
+C0001,Trần An,trần.an239@example.com,0982276804,Male,1962-03-09,Ho Chi Minh City,2024-04-05,ambiguous_assumed_dmy
+C0002,Đỗ Quân,đỗ.quân105@example.com,0914287142,Male,1979-04-26,Da Nang,2026-02-20,iso
+C0003,Vũ Mai,vũ.mai722@example.com,0907593586,Male,1992-11-06,Ho Chi Minh City,2025-08-14,ambiguous_assumed_dmy
+C0004,Hoàng Chi,hoàng.chi176@example.com,0918348136,Female,1966-05-28,Bac Ninh,2025-09-15,iso
+C0005,Đặng Mai,đặng.mai217@example.com,0986237088,Female,1995-12-28,Ha Noi,2024-10-01,iso
+C0006,Đặng Trang,đặng.trang506@example.com,0912252583,Male,1979-09-04,Can Tho,2024-05-21,iso
+C0007,Lê Quân,lê.quân769@example.com,0970395980,Female,1970-04-11,Can Tho,2025-11-29,iso
+C0008,Đặng Hùng,đặng.hùng520@example.com,0960779751,Female,1986-10-10,Bac Ninh,2026-05-11,iso
+C0009,Lê An,lê.an498@example.com,0973098830,Male,1967-01-24,Bac Ninh,2024-03-28,iso
+C0010,Bùi Hùng,,0935699767,Female,1995-10-18,Bac Ninh,2025-11-18,iso
+C0011,Phạm Chi,phạm.chi73@example.com,0930550700,Female,1962-10-26,Da Nang,2026-05-30,forced_dmy
+C0012,Phạm Hà,phạm.hà421@example.com,0989547810,Male,1998-02-09,Hai Phong,2024-12-28,ambiguous_assumed_dmy
+C0013,Trần Bình,trần.bình946@example.com,0967811511,Female,2001-03-07,Quang Ninh,2024-09-12,ambiguous_assumed_dmy
+C0014,Nguyễn An,nguyễn.an272@example.com,0909814240,Male,1993-12-31,Hai Phong,2024-01-03,forced_dmy
+C0015,Đỗ Tuấn,đỗ.tuấn544@example.com,0911207030,Male,2002-10-10,Quang Ninh,2025-05-29,ambiguous_assumed_dmy
+C0016,Lê Chi,lê.chi598@example.com,0970849550,Female,1967-05-10,Bac Ninh,2025-03-05,ambiguous_assumed_dmy
+C0017,Vũ Linh,vũ.linh219@example.com,0933623704,Male,1968-12-20,Can Tho,2024-03-16,iso
+C0018,Trần Linh,trần.linh962@example.com,0932453985,Male,1986-11-10,Ha Noi,2025-11-10,iso
+C0019,Đỗ Hà,đỗ.hà434@example.com,0932236852,Male,1964-07-22,Bac Ninh,2024-04-04,iso
+C0020,Lê Mai,lê.mai597@example.com,0917540089,Male,1963-03-26,Da Nang,2026-05-04,forced_dmy
+C0021,Nguyễn Minh,nguyễn.minh159@example.com,0938788221,Male,1996-06-16,Bac Ninh,2025-09-27,iso
+C0022,Nguyễn Hùng,nguyễn.hùng40@example.com,0989746721,Female,1969-09-12,Quang Ninh,2025-01-26,iso
+C0023,Vũ Minh,vũ.minh550@example.com,0912632073,Male,1995-11-09,Quang Ninh,2025-11-26,iso
+C0024,Lê Mai,lê.mai726@example.com,0901473653,Male,1977-01-19,Ha Noi,2024-09-17,forced_mdy
+C0025,Phạm Nga,phạm.nga335@example.com,0960633873,Male,1987-09-30,Hai Phong,2025-11-13,forced_mdy
+C0026,Phạm Quân,phạm.quân805@example.com,0989696350,Female,1985-09-27,Hai Phong,2024-08-03,forced_dmy
+C0027,Bùi Lan,bùi.lan975@example.com,0974971056,Male,1990-01-26,Quang Ninh,2024-04-05,iso
+C0028,Lê An,,0902480461,Male,1994-06-13,Hai Phong,2025-05-21,iso
+C0029,Phạm Hùng,phạm.hùng628@example.com,0985028486,Male,1988-06-19,Hai Phong,2026-02-12,forced_mdy
+C0030,Lê Tuấn,lê.tuấn241@example.com,0962267562,Female,1966-12-13,Da Nang,2025-12-31,forced_dmy
+C0031,Lê Hà,,0913124340,Male,1997-10-09,Quang Ninh,2025-02-02,ambiguous_assumed_dmy
+C0032,Bùi An,bùi.an280@example.com,0932388577,Female,1979-10-14,Ho Chi Minh City,2025-05-14,iso
+C0033,Vũ Phương,vũ.phương439@example.com,0981416035,Female,1962-06-07,Bac Ninh,2024-03-26,iso
+C0034,Hoàng Phương,hoàng.phương768@example.com,0932373782,Male,1967-05-07,Ha Noi,2025-04-26,ambiguous_assumed_dmy
+C0035,Trần Bình,trần.bình263@example.com,0909101165,Male,1979-07-22,Bac Ninh,2025-04-21,forced_mdy
+C0036,Trần Hùng,trần.hùng851@example.com,0931036937,Female,1966-10-26,Bac Ninh,2025-08-29,iso
+C0037,Hoàng Dũng,hoàng.dũng984@example.com,0977343538,Female,2003-12-23,Hai Phong,2024-04-18,forced_mdy
+C0038,Đặng Hùng,đặng.hùng252@example.com,0985669748,Male,1984-01-29,Quang Ninh,2024-11-26,forced_dmy
+C0039,Bùi Phương,bùi.phương530@example.com,0930812738,Female,1984-10-13,Ha Noi,2025-07-23,iso
+C0040,Bùi Linh,bùi.linh544@example.com,0984740242,Male,1993-08-02,Can Tho,2025-04-29,ambiguous_assumed_dmy
+C0041,Vũ Nga,vũ.nga757@example.com,0984327379,Male,1976-10-08,Ho Chi Minh City,2024-07-15,ambiguous_assumed_dmy
+C0042,Đỗ Minh,đỗ.minh715@example.com,0908233710,Female,1964-11-21,Da Nang,2025-07-20,iso
+C0043,Hoàng Tuấn,hoàng.tuấn703@example.com,0964109484,Male,1966-08-24,Bac Ninh,2025-08-13,iso
+C0044,Hoàng Chi,hoàng.chi603@example.com,0911767254,Male,1999-09-20,Quang Ninh,2024-10-31,forced_mdy
+C0045,Nguyễn Dũng,nguyễn.dũng238@example.com,0916202514,Male,2002-02-27,Ha Noi,2024-10-25,forced_mdy
+C0046,Trần Linh,trần.linh74@example.com,0937669456,Male,1983-10-31,Ho Chi Minh City,2026-04-26,forced_dmy
+C0047,Hoàng Trang,hoàng.trang619@example.com,0904342545,Male,1998-10-04,Da Nang,2026-01-22,iso
+C0048,Nguyễn Mai,nguyễn.mai357@example.com,0970746915,Female,2004-02-11,Hai Phong,2024-04-03,ambiguous_assumed_dmy
+C0049,Trần Hùng,trần.hùng994@example.com,0934464700,Male,1982-08-23,Ha Noi,2024-11-27,forced_mdy
+C0050,Bùi Quân,bùi.quân497@example.com,0901376725,Male,1985-03-11,Bac Ninh,2025-03-24,ambiguous_assumed_dmy
+C0051,Phạm Hùng,phạm.hùng299@example.com,0935509941,Male,1973-10-24,Bac Ninh,2025-05-25,forced_dmy
+C0052,Bùi Linh,bùi.linh520@example.com,0965395882,Male,1997-03-23,Quang Ninh,2024-12-14,forced_dmy
+C0053,Hoàng Tuấn,hoàng.tuấn240@example.com,0914437398,Male,1981-06-04,Hai Phong,2025-08-08,ambiguous_assumed_dmy
+C0054,Bùi Phương,bùi.phương896@example.com,0969761919,Female,1989-10-13,Ha Noi,2026-06-09,forced_mdy
+C0055,Nguyễn Hà,nguyễn.hà873@example.com,0968907263,Male,1967-03-16,Da Nang,2026-05-22,forced_dmy
+C0056,Đỗ Bình,đỗ.bình711@example.com,0970699740,Male,1969-01-06,Ho Chi Minh City,2025-03-30,iso
+C0057,Nguyễn Minh,nguyễn.minh247@example.com,0933155710,Male,1994-04-27,Bac Ninh,2025-09-26,iso
+C0058,Hoàng Trang,hoàng.trang707@example.com,0936842509,Female,1986-11-02,Hai Phong,2025-10-16,ambiguous_assumed_dmy
+C0059,Đặng Tuấn,đặng.tuấn886@example.com,0902559296,Male,1984-08-16,Can Tho,2024-01-09,forced_mdy
+C0060,Bùi Minh,bùi.minh926@example.com,0916366676,Male,1972-04-08,Ha Noi,2025-10-05,ambiguous_assumed_dmy
+C0061,Nguyễn Nga,nguyễn.nga936@example.com,0981934278,Male,1992-10-27,Can Tho,2025-06-27,forced_dmy
+C0062,Hoàng Nam,hoàng.nam405@example.com,0904072663,Male,1992-10-24,Quang Ninh,2024-04-02,forced_mdy
+C0063,Bùi Nga,bùi.nga664@example.com,0987236364,Female,1989-05-06,Ho Chi Minh City,2025-09-16,ambiguous_assumed_dmy
+C0064,Đặng Dũng,đặng.dũng714@example.com,0910091253,Male,1993-04-14,Bac Ninh,2025-11-17,forced_mdy
+C0065,Lê Quân,lê.quân102@example.com,0980449034,Female,1981-07-03,Da Nang,2026-05-25,ambiguous_assumed_dmy
+C0066,Nguyễn Phương,nguyễn.phương342@example.com,0931184665,Male,1961-11-30,Quang Ninh,2024-02-21,forced_mdy
+C0067,Trần Lan,trần.lan257@example.com,0972831908,Female,1972-12-24,,2024-05-13,forced_mdy
+C0068,Lê An,lê.an797@example.com,0937231075,Female,1965-09-13,,2025-05-02,forced_dmy
+C0069,Phạm Bình,,0987854904,Female,1996-01-12,Bac Ninh,2025-03-12,iso
+C0070,Vũ Hà,vũ.hà719@example.com,0901657352,Female,1998-08-05,Quang Ninh,2024-04-11,ambiguous_assumed_dmy
+C0071,Phạm Quân,phạm.quân852@example.com,0938373329,Female,2002-07-19,Ha Noi,2024-03-09,forced_dmy
+C0072,Vũ Hà,vũ.hà53@example.com,0970956489,Male,1997-12-10,Bac Ninh,2026-06-07,ambiguous_assumed_dmy
+C0073,Đỗ Lan,đỗ.lan998@example.com,0916218375,Male,1998-01-07,Can Tho,2026-05-15,ambiguous_assumed_dmy
+C0074,Hoàng An,,0912793116,Female,1966-03-30,Bac Ninh,2024-05-25,forced_mdy
+C0075,Phạm Phương,phạm.phương633@example.com,0964133958,Female,1973-12-16,Quang Ninh,2024-06-10,forced_dmy
+C0076,Đặng Tuấn,đặng.tuấn316@example.com,0974271426,Female,2003-08-28,Bac Ninh,2025-06-23,forced_dmy
+C0077,Nguyễn An,nguyễn.an546@example.com,0913212307,Female,1975-06-10,Hai Phong,2024-05-12,ambiguous_assumed_dmy
+C0078,Vũ Chi,vũ.chi415@example.com,0968009855,Female,1997-06-21,Ha Noi,2024-10-23,iso
+C0079,Bùi Nga,bùi.nga173@example.com,0904144087,Female,1979-11-17,Quang Ninh,2024-12-07,forced_mdy
+C0080,Phạm Nga,phạm.nga644@example.com,0937882116,Female,1966-05-10,Quang Ninh,2024-06-30,ambiguous_assumed_dmy
+C0081,Bùi Nam,bùi.nam463@example.com,0983446753,Male,1966-08-28,Hai Phong,2024-11-13,forced_dmy
+C0082,Trần Chi,trần.chi488@example.com,0975359709,Male,1976-11-20,Can Tho,2024-11-25,iso
+C0083,Trần Nam,trần.nam397@example.com,0980607956,Female,1992-08-24,Da Nang,2025-01-16,forced_mdy
+C0084,Vũ Chi,vũ.chi680@example.com,0930627698,Female,1989-11-27,Can Tho,2024-03-24,forced_dmy
+C0085,Đặng Hà,,0977056317,Female,1968-05-20,Bac Ninh,2025-10-23,iso
+C0086,Hoàng Hùng,hoàng.hùng898@example.com,0913719127,Male,1963-05-21,Da Nang,2025-11-08,forced_mdy
+C0087,Lê Hùng,lê.hùng292@example.com,0918781446,Female,1981-04-23,Can Tho,2025-03-30,iso
+C0088,Phạm Minh,phạm.minh205@example.com,0969165477,Male,1997-07-23,Quang Ninh,2024-06-14,forced_dmy
+C0089,Bùi Nga,bùi.nga94@example.com,0979751014,Female,1973-03-21,Hai Phong,2026-04-30,forced_dmy
+C0090,Đặng Bình,đặng.bình141@example.com,0965293098,Male,1990-01-29,Ho Chi Minh City,2026-03-21,forced_dmy
+C0091,Bùi Trang,bùi.trang244@example.com,0970028575,Female,1969-12-22,Da Nang,2026-03-05,iso
+C0092,Đặng Trang,đặng.trang362@example.com,0901950521,Male,1998-07-05,Can Tho,2024-01-02,iso
+C0093,Trần Nga,trần.nga766@example.com,0909575080,Female,1994-09-16,Da Nang,2025-01-17,iso
+C0094,Phạm Dũng,phạm.dũng647@example.com,0977305817,Male,2001-09-06,Hai Phong,2025-12-13,iso
+C0095,Bùi Bình,bùi.bình772@example.com,0932783338,Female,2002-06-21,Ha Noi,2024-09-16,forced_dmy
+C0096,Nguyễn Nam,nguyễn.nam377@example.com,0931387839,Male,2004-07-07,Hai Phong,2025-12-09,iso
+C0097,Đặng Chi,đặng.chi455@example.com,0966853063,Female,1998-03-24,Bac Ninh,2024-06-19,iso
+C0098,Vũ Quân,vũ.quân870@example.com,0936706457,Female,1974-05-09,Ho Chi Minh City,2024-02-01,iso
+C0099,Trần Linh,trần.linh543@example.com,0983356693,Male,1966-11-24,Ho Chi Minh City,2025-08-10,forced_dmy
+C0100,Phạm Dũng,phạm.dũng205@example.com,0907435224,Male,1985-08-14,Hai Phong,2025-12-11,iso
+C0101,Lê Trang,lê.trang729@example.com,0908996752,Male,1986-11-28,Ho Chi Minh City,2026-05-21,forced_dmy
+C0102,Phạm Dũng,phạm.dũng68@example.com,0917243549,Male,1971-08-23,Ha Noi,2025-09-18,forced_mdy
+C0103,Đỗ Quân,đỗ.quân444@example.com,0968096463,Male,1976-04-28,Ho Chi Minh City,2026-02-25,iso
+C0104,Lê Minh,lê.minh282@example.com,0911929520,Male,1977-11-08,Can Tho,2025-10-12,ambiguous_assumed_dmy
+C0105,Trần Hùng,,0979167685,Male,1962-07-18,Ha Noi,2024-03-24,forced_mdy
+C0106,Đặng An,đặng.an62@example.com,0968563284,Female,2000-09-08,Bac Ninh,2024-03-15,ambiguous_assumed_dmy
+C0107,Bùi Lan,bùi.lan109@example.com,0936377891,Female,1993-03-29,Can Tho,2025-06-11,forced_dmy
+C0108,Hoàng Trang,hoàng.trang321@example.com,0911098499,Male,1989-05-17,Bac Ninh,2025-08-14,forced_dmy
+C0109,Bùi Tuấn,bùi.tuấn904@example.com,0934034250,Female,1985-03-29,Can Tho,2025-05-21,forced_dmy
+C0110,Nguyễn Dũng,nguyễn.dũng76@example.com,0961234005,Female,1992-10-07,Da Nang,2025-07-20,ambiguous_assumed_dmy
+C0111,Trần Hà,trần.hà40@example.com,0903739715,Female,2004-11-11,Ha Noi,2024-02-11,ambiguous_assumed_dmy
+C0112,Bùi Hà,bùi.hà522@example.com,0978193368,Female,1990-06-03,Quang Ninh,2025-06-03,ambiguous_assumed_dmy
+C0113,Hoàng Tuấn,hoàng.tuấn272@example.com,0903695776,Female,1962-05-23,Hai Phong,2025-09-03,forced_mdy
+C0114,Bùi Hùng,bùi.hùng452@example.com,0976681609,Male,1969-11-10,Ha Noi,2024-07-14,iso
+C0115,Phạm Quân,phạm.quân539@example.com,0977987012,Female,1989-02-28,Hai Phong,2025-11-09,iso
+C0116,Đỗ Nam,,0973776661,Male,1982-02-11,Can Tho,2024-10-12,ambiguous_assumed_dmy
+C0117,Phạm Tuấn,phạm.tuấn978@example.com,0934597255,Male,1995-05-25,Da Nang,2026-04-18,iso
+C0118,Trần Nga,trần.nga601@example.com,0966728252,Female,1969-10-19,Bac Ninh,2025-09-22,iso
+C0119,Đỗ Linh,đỗ.linh958@example.com,0982134619,Female,1974-03-03,Bac Ninh,2025-02-20,ambiguous_assumed_dmy
+C0120,Hoàng Nam,hoàng.nam181@example.com,0936905579,Male,1975-09-15,Quang Ninh,2025-03-03,forced_dmy
+C0121,Hoàng Bình,hoàng.bình480@example.com,0902693465,Female,1972-01-15,Can Tho,2026-05-21,iso
+C0122,Lê Trang,lê.trang528@example.com,0982177571,Female,1996-05-18,Hai Phong,2026-04-26,forced_dmy
+C0123,Trần Hùng,trần.hùng369@example.com,0914903423,Female,1961-01-09,Bac Ninh,2024-09-24,iso
+C0124,Trần Trang,trần.trang227@example.com,0931698766,Male,1986-06-20,,2025-01-11,forced_dmy
+C0125,Bùi Nga,,0967978876,Female,1967-05-06,Hai Phong,2025-06-22,iso
+C0126,Trần Bình,trần.bình457@example.com,0979251846,Female,2003-11-08,Can Tho,2024-04-03,iso
+C0127,Đặng Trang,đặng.trang353@example.com,0970487387,Female,1966-07-21,Hai Phong,2024-02-16,forced_mdy
+C0128,Trần Tuấn,trần.tuấn940@example.com,0902116793,Male,1994-04-25,Quang Ninh,2025-04-04,iso
+C0129,Đỗ Hà,đỗ.hà690@example.com,0988193198,Male,1962-01-14,Hai Phong,2024-11-01,forced_mdy
+C0130,Phạm Linh,phạm.linh69@example.com,0963297184,Male,1961-05-27,Ho Chi Minh City,2024-09-03,forced_dmy
+C0131,Nguyễn Linh,nguyễn.linh590@example.com,0980457719,Female,1981-01-03,Bac Ninh,2026-04-15,iso
+C0132,Lê Linh,lê.linh965@example.com,0963098964,Male,2004-06-18,Da Nang,2024-02-18,forced_mdy
+C0133,Đặng Quân,đặng.quân423@example.com,0912152281,Male,2001-07-16,Can Tho,2024-02-29,forced_dmy
+C0134,Hoàng Lan,hoàng.lan193@example.com,0936980712,Female,1963-07-19,Ha Noi,2026-06-13,forced_dmy
+C0135,Vũ Minh,vũ.minh566@example.com,0902177796,Male,1978-05-07,Ho Chi Minh City,2025-02-10,ambiguous_assumed_dmy
+C0136,Đỗ Nga,đỗ.nga424@example.com,0932540948,Female,1978-03-23,Da Nang,2025-01-14,forced_mdy
+C0137,Nguyễn Mai,nguyễn.mai967@example.com,0979541338,Female,2004-10-17,Bac Ninh,2025-07-17,forced_dmy
+C0138,Bùi Trang,bùi.trang860@example.com,0917315189,Male,1965-04-08,Ha Noi,2025-06-20,iso
+C0139,Lê Linh,lê.linh17@example.com,0907053666,Male,2003-05-08,Hai Phong,2025-11-06,iso
+C0140,Đỗ Mai,đỗ.mai247@example.com,0979086891,Male,1968-08-22,Ho Chi Minh City,2025-06-20,forced_dmy
+C0141,Đặng Chi,đặng.chi389@example.com,0939426280,Female,1962-11-04,Hai Phong,2024-04-05,iso
+C0142,Nguyễn Hùng,nguyễn.hùng923@example.com,0904475805,Female,1963-10-26,Ho Chi Minh City,2024-08-23,forced_dmy
+C0143,Trần Mai,trần.mai167@example.com,0975093957,Female,1995-09-25,Da Nang,2024-03-19,forced_mdy
+C0144,Đỗ Nam,đỗ.nam78@example.com,0967197590,Male,1999-03-19,Quang Ninh,2024-08-25,forced_dmy
+C0145,Hoàng Trang,hoàng.trang731@example.com,0962531537,Female,1986-07-01,Ho Chi Minh City,2026-03-28,ambiguous_assumed_dmy
+C0146,Đặng Hà,đặng.hà460@example.com,0983309471,Male,1967-10-31,Hai Phong,2024-07-10,iso
+C0147,Trần Nga,trần.nga174@example.com,0970533230,Male,1981-10-11,Can Tho,2025-08-08,iso
+C0148,Hoàng Minh,hoàng.minh508@example.com,0934044402,Female,1982-02-14,Bac Ninh,2026-01-08,forced_dmy
+C0149,Lê Minh,lê.minh618@example.com,0909368338,Female,1972-03-18,Da Nang,2024-11-03,forced_dmy
+C0150,Lê Phương,lê.phương955@example.com,0932645238,Female,1995-02-04,Ha Noi,2025-01-08,ambiguous_assumed_dmy
+C0151,Lê An,lê.an143@example.com,0984742687,Male,1996-09-14,Hai Phong,2025-11-20,iso
+C0152,Lê Quân,lê.quân719@example.com,0960944596,Female,1963-04-19,Da Nang,2026-03-20,iso
+C0153,Vũ Hùng,vũ.hùng265@example.com,0986566937,Female,1969-07-03,Ha Noi,2024-01-11,ambiguous_assumed_dmy
+C0154,Đặng Trang,đặng.trang146@example.com,0985530149,Male,1970-05-31,Bac Ninh,2026-05-01,forced_dmy
+C0155,Phạm Tuấn,phạm.tuấn694@example.com,0934463381,Female,1990-11-10,Ha Noi,2025-10-25,ambiguous_assumed_dmy
+C0156,Đỗ Hùng,,0935924164,Female,1962-08-14,Can Tho,2026-01-25,forced_mdy
+C0157,Đặng An,đặng.an469@example.com,0982277575,Male,1992-10-25,Ho Chi Minh City,2024-11-29,forced_mdy
+C0158,Đỗ Nam,đỗ.nam87@example.com,0973313416,Male,1986-09-07,Can Tho,2025-09-21,ambiguous_assumed_dmy
+C0159,Phạm Minh,phạm.minh502@example.com,0901654131,Male,1975-07-17,Ho Chi Minh City,2025-07-22,iso
+C0160,Bùi Bình,bùi.bình861@example.com,0939413564,Female,2004-02-11,Bac Ninh,2025-03-01,iso
+C0161,Nguyễn Linh,nguyễn.linh275@example.com,0930227574,Female,1970-02-26,Ha Noi,2025-08-09,forced_mdy
+C0162,Bùi Lan,bùi.lan121@example.com,0961872943,Female,1967-10-21,Quang Ninh,2025-03-25,forced_mdy
+C0163,Vũ Quân,vũ.quân300@example.com,0916788555,Male,1975-08-02,Bac Ninh,2024-11-27,ambiguous_assumed_dmy
+C0164,Trần Hà,trần.hà693@example.com,0969981827,Female,1982-03-17,Quang Ninh,2026-02-18,iso
+C0165,Hoàng Quân,hoàng.quân336@example.com,0964680529,Male,1993-09-02,Hai Phong,2025-04-10,ambiguous_assumed_dmy
+C0166,Bùi Nga,bùi.nga497@example.com,0907398432,Male,1971-09-19,Quang Ninh,2025-08-02,iso
+C0167,Bùi An,bùi.an956@example.com,0909149499,Female,1987-01-30,Quang Ninh,2024-06-11,forced_mdy
+C0168,Hoàng Chi,hoàng.chi2@example.com,0936606774,Female,1968-03-07,Ha Noi,2025-12-21,iso
+C0169,Phạm Trang,phạm.trang105@example.com,0900318642,Female,1968-01-06,Quang Ninh,2026-01-18,ambiguous_assumed_dmy
+C0170,Lê Phương,lê.phương156@example.com,0916605613,Female,1979-02-11,Bac Ninh,2025-10-05,iso
+C0171,Trần Hà,trần.hà28@example.com,0905393120,Male,1985-07-24,Bac Ninh,2026-03-08,iso
+C0172,Đỗ Lan,đỗ.lan370@example.com,0983677232,Male,1966-05-15,Ha Noi,2025-06-24,forced_dmy
+C0173,Đặng Nga,đặng.nga408@example.com,0976797002,Male,1963-07-29,Quang Ninh,2024-03-02,forced_mdy
+C0174,Đỗ Quân,đỗ.quân550@example.com,0967056235,Male,1978-03-25,Ho Chi Minh City,2026-04-07,forced_mdy
+C0175,Hoàng Quân,hoàng.quân725@example.com,0989229160,Male,1975-10-04,Ha Noi,2024-05-02,iso
+C0176,Vũ Mai,vũ.mai66@example.com,0913787183,Female,1998-07-08,Can Tho,2024-10-05,ambiguous_assumed_dmy
+C0177,Đỗ Nga,đỗ.nga3@example.com,0904532157,Male,1980-06-28,Can Tho,2026-01-28,iso
+C0178,Bùi Nga,bùi.nga427@example.com,0969190876,Female,1980-02-21,Ho Chi Minh City,2024-11-25,forced_dmy
+C0179,Vũ Dũng,vũ.dũng319@example.com,0976025048,Female,1985-04-29,Quang Ninh,2026-03-03,forced_mdy
+C0180,Nguyễn Nga,nguyễn.nga779@example.com,0912772399,Male,1977-07-13,,2026-01-20,iso
+C0181,Nguyễn Linh,nguyễn.linh543@example.com,0973889068,Male,1987-08-03,Ho Chi Minh City,2024-04-16,ambiguous_assumed_dmy
+C0182,Lê Mai,lê.mai653@example.com,0900284847,Female,1968-07-28,Ho Chi Minh City,2025-06-01,forced_mdy
+C0183,Nguyễn Quân,nguyễn.quân240@example.com,0989223877,Female,1988-07-14,Da Nang,2025-04-08,iso
+C0184,Lê Dũng,lê.dũng827@example.com,0914313744,Male,1970-04-10,Ho Chi Minh City,2024-04-02,ambiguous_assumed_dmy
+C0185,Nguyễn Lan,nguyễn.lan876@example.com,0931793028,Female,1975-08-07,Hai Phong,2024-02-01,iso
+C0186,Trần Hà,trần.hà266@example.com,0900891836,Male,1967-07-16,Can Tho,2025-08-19,iso
+C0187,Bùi Hà,bùi.hà392@example.com,0909830415,Male,1995-06-09,Ha Noi,2025-05-23,iso
+C0188,Phạm Hùng,phạm.hùng287@example.com,0932806224,Male,2002-12-22,Ha Noi,2024-03-03,forced_dmy
+C0189,Đỗ Linh,đỗ.linh330@example.com,0989503747,Male,1990-11-12,Can Tho,2025-08-02,iso
+C0190,Vũ Linh,vũ.linh673@example.com,0908709579,Male,1974-04-27,Ho Chi Minh City,2024-04-12,forced_mdy
+C0191,Phạm Phương,phạm.phương361@example.com,0939912373,Male,1962-07-13,Bac Ninh,2025-12-21,forced_mdy
+C0192,Bùi Minh,bùi.minh349@example.com,0914022509,Male,1978-01-27,Ho Chi Minh City,2026-04-05,forced_dmy
+C0193,Nguyễn Hà,nguyễn.hà345@example.com,0977115307,Female,1995-06-28,Ha Noi,2025-08-23,iso
+C0194,Đặng Tuấn,đặng.tuấn752@example.com,0983758636,Male,1975-09-24,Da Nang,2025-01-22,iso
+C0195,Nguyễn Phương,,0970699259,Female,1972-08-13,,2024-12-05,forced_dmy
+C0196,Trần Nam,trần.nam993@example.com,0960263770,Male,1999-04-25,Hai Phong,2026-01-20,forced_dmy
+C0197,Vũ Phương,vũ.phương327@example.com,0908757247,Female,1962-12-30,Ha Noi,2024-10-28,iso
+C0198,Lê Phương,lê.phương169@example.com,0917580564,Male,1962-10-12,Bac Ninh,2025-03-17,iso
+C0199,Trần Nam,trần.nam586@example.com,0919459562,Female,1968-08-08,Hai Phong,2024-02-20,iso
+C0200,Vũ An,vũ.an119@example.com,0960864026,Male,1967-05-08,Quang Ninh,2025-04-29,ambiguous_assumed_dmy
+C0201,Hoàng Chi,hoàng.chi578@example.com,0985183424,Male,1980-04-18,Da Nang,2026-05-07,forced_mdy
+C0202,Trần Nga,trần.nga488@example.com,0974720359,Female,2002-08-07,Ho Chi Minh City,2025-08-09,ambiguous_assumed_dmy
+C0203,Đỗ Hà,đỗ.hà207@example.com,0909491210,Male,1967-11-01,Hai Phong,2025-11-30,ambiguous_assumed_dmy
+C0204,Vũ Chi,vũ.chi154@example.com,0903332487,Female,1997-08-23,Hai Phong,2024-04-25,iso
+C0205,Trần Minh,trần.minh624@example.com,0978826541,Male,1996-02-25,Can Tho,2024-05-27,iso
+C0206,Vũ Linh,vũ.linh702@example.com,0907980832,Female,2004-02-08,Bac Ninh,2026-05-28,iso
+C0207,Bùi Nam,bùi.nam528@example.com,0937604944,Female,1993-07-18,Ha Noi,2026-04-20,forced_dmy
+C0208,Đặng Hà,đặng.hà281@example.com,0978018824,Female,1992-04-30,Ho Chi Minh City,2025-12-22,forced_mdy
+C0209,Trần An,trần.an706@example.com,0913518531,Male,1983-03-16,Quang Ninh,2026-02-05,iso
+C0210,Nguyễn Hùng,nguyễn.hùng663@example.com,0977222265,Male,1960-10-18,Ho Chi Minh City,2025-04-30,iso
+C0211,Hoàng Mai,hoàng.mai679@example.com,0968842356,Male,1969-03-06,Can Tho,2024-01-08,ambiguous_assumed_dmy
+C0212,Trần Tuấn,trần.tuấn784@example.com,0903232696,Male,1976-11-24,Can Tho,2024-06-02,forced_mdy
+C0213,Vũ Hà,vũ.hà731@example.com,0980429475,Female,,Bac Ninh,2024-12-17,iso_out_of_range(raw=2030-01-01)
+C0214,Đỗ Minh,đỗ.minh671@example.com,0918810128,Female,1976-06-03,Da Nang,2025-11-27,ambiguous_assumed_dmy
+C0215,Hoàng Quân,hoàng.quân513@example.com,0933541065,Male,1966-05-22,Ho Chi Minh City,2025-04-28,forced_mdy
+C0216,Đặng Bình,đặng.bình500@example.com,0911245943,Male,1976-03-06,Ha Noi,2026-03-08,ambiguous_assumed_dmy
+C0217,Nguyễn Trang,nguyễn.trang414@example.com,0932751771,Female,1998-11-28,Hai Phong,2025-10-10,forced_dmy
+C0218,Nguyễn Lan,nguyễn.lan899@example.com,0983038166,Male,1982-04-28,Bac Ninh,2024-08-19,iso
+C0219,Đặng Minh,đặng.minh368@example.com,0910094554,Male,1972-01-02,Hai Phong,2024-12-16,ambiguous_assumed_dmy
+C0220,Phạm Linh,phạm.linh262@example.com,0989205177,Male,1993-08-29,Bac Ninh,2026-06-16,forced_mdy
+C0221,Trần An,trần.an678@example.com,0906435416,Male,1960-10-31,Hai Phong,2024-11-04,forced_mdy
+C0222,Lê Quân,lê.quân420@example.com,0905627467,Male,1978-02-03,Bac Ninh,2025-01-01,iso
+C0223,Bùi Lan,bùi.lan524@example.com,0989306986,Female,1973-05-19,Quang Ninh,2024-04-02,forced_dmy
+C0224,Phạm Trang,phạm.trang98@example.com,0932088836,Male,1998-03-21,Ha Noi,2026-01-26,iso
+C0225,Vũ Nga,vũ.nga395@example.com,0969273314,Female,2000-12-15,Quang Ninh,2024-10-05,forced_dmy
+C0226,Lê Dũng,lê.dũng389@example.com,0916091458,Male,1999-04-23,Can Tho,2024-07-04,forced_mdy
+C0227,Lê Tuấn,lê.tuấn347@example.com,0961402376,Female,1980-02-04,Quang Ninh,2025-11-16,ambiguous_assumed_dmy
+C0228,Phạm Tuấn,phạm.tuấn481@example.com,0936618860,Male,1974-01-29,Quang Ninh,2025-06-01,iso
+C0229,Vũ Linh,vũ.linh511@example.com,0939026424,Female,2000-03-14,Quang Ninh,2024-03-31,iso
+C0230,Nguyễn Dũng,nguyễn.dũng468@example.com,0964500663,Female,1978-07-23,Bac Ninh,2025-11-01,iso
+C0231,Bùi Nam,bùi.nam850@example.com,0977573406,Male,1960-12-03,Da Nang,2024-12-15,ambiguous_assumed_dmy
+C0232,Trần Bình,trần.bình845@example.com,0914874211,Female,1995-04-01,Hai Phong,2024-08-08,iso
+C0233,Nguyễn Dũng,nguyễn.dũng495@example.com,0964559075,Male,1998-10-30,Can Tho,2026-05-08,forced_mdy
+C0234,Lê Hà,lê.hà987@example.com,0903685399,Male,1982-04-09,Hai Phong,2024-10-07,ambiguous_assumed_dmy
+C0235,Lê Quân,lê.quân640@example.com,0977727879,Male,1979-01-07,Ho Chi Minh City,2024-07-24,ambiguous_assumed_dmy
+C0236,Lê Hùng,lê.hùng916@example.com,0975677559,Male,1997-06-14,Bac Ninh,2025-11-21,forced_dmy
+C0237,Đỗ Dũng,đỗ.dũng708@example.com,0903002796,Female,1973-02-19,Ha Noi,2026-05-09,forced_mdy
+C0238,Vũ Trang,vũ.trang49@example.com,0906652635,Male,1985-10-21,,2025-12-10,forced_dmy
+C0239,Vũ Bình,vũ.bình560@example.com,0907288426,Female,1992-12-28,Can Tho,2026-02-12,forced_mdy
+C0240,Hoàng Trang,hoàng.trang599@example.com,0919097102,Male,1983-09-15,Ho Chi Minh City,2024-05-13,forced_dmy
+C0241,Lê Bình,lê.bình725@example.com,0919576837,Female,1992-02-15,Quang Ninh,2024-03-15,iso
+C0242,Trần Hùng,trần.hùng771@example.com,0965438632,Male,2002-08-08,Quang Ninh,2025-07-28,iso
+C0243,Vũ Trang,vũ.trang554@example.com,0919669639,Male,1970-03-04,Da Nang,2025-01-30,iso
+C0244,Đỗ Trang,đỗ.trang216@example.com,0960815919,Female,1960-08-28,Ha Noi,2025-10-03,forced_mdy
+C0245,Trần Lan,trần.lan340@example.com,0978874806,Female,1962-02-17,Bac Ninh,2025-04-15,iso
+C0246,Lê Mai,lê.mai548@example.com,0970894443,Female,1994-11-12,Ha Noi,2025-11-20,ambiguous_assumed_dmy
+C0247,Nguyễn Chi,nguyễn.chi32@example.com,0939173074,Male,1995-06-13,Bac Ninh,2026-04-21,forced_mdy
+C0248,Lê Phương,lê.phương569@example.com,0972628986,Female,1960-12-31,Quang Ninh,2025-07-20,iso
+C0249,Đặng Chi,đặng.chi855@example.com,0932772981,Female,1976-07-04,Can Tho,2024-08-14,iso
+C0250,Nguyễn Trang,nguyễn.trang241@example.com,0985200743,Male,1971-03-07,Bac Ninh,2025-11-18,ambiguous_assumed_dmy
+C0251,Phạm Nam,phạm.nam321@example.com,0964635533,Female,1998-04-06,Ha Noi,2024-06-21,ambiguous_assumed_dmy
+C0252,Hoàng Nga,hoàng.nga880@example.com,0916344741,Female,1967-05-10,Da Nang,2026-05-11,ambiguous_assumed_dmy
+C0253,Trần An,trần.an153@example.com,0976857202,Male,2002-05-09,Quang Ninh,2025-10-31,iso
+C0254,Hoàng Hà,hoàng.hà144@example.com,0965030299,Male,1974-11-17,Can Tho,2026-02-14,iso
+C0255,Lê Tuấn,lê.tuấn940@example.com,0930722265,Male,1992-05-29,Hai Phong,2025-02-01,iso
+C0256,Vũ Dũng,vũ.dũng670@example.com,0989627553,Male,1993-12-16,Can Tho,2025-01-09,forced_dmy
+C0257,Đỗ Phương,đỗ.phương659@example.com,0938378084,Female,1980-08-19,Can Tho,2024-03-19,iso
+C0258,Lê Nga,lê.nga663@example.com,0977128744,Male,1978-11-26,Ho Chi Minh City,2025-08-27,iso
+C0259,Lê Hùng,lê.hùng746@example.com,0916050219,Male,1961-09-02,Bac Ninh,2026-06-18,iso
+C0260,Bùi Tuấn,bùi.tuấn703@example.com,0961867816,Female,1983-09-24,Bac Ninh,2024-06-20,forced_mdy
+C0261,Trần Linh,trần.linh924@example.com,0963128541,Male,1968-08-21,Hai Phong,2024-06-30,forced_mdy
+C0262,Trần Chi,trần.chi45@example.com,0966950964,Male,1997-09-27,Quang Ninh,2025-01-14,iso
+C0263,Đặng Nga,đặng.nga898@example.com,0978985427,Male,1967-07-09,Can Tho,2024-10-17,ambiguous_assumed_dmy
+C0264,Nguyễn An,nguyễn.an260@example.com,0975532841,Male,1998-03-23,Can Tho,2025-10-29,forced_mdy
+C0265,Hoàng Phương,hoàng.phương408@example.com,0914743523,Male,1990-11-22,Bac Ninh,2026-03-03,forced_mdy
+C0266,Phạm Trang,phạm.trang988@example.com,0989157866,Male,1964-09-01,Hai Phong,2024-06-13,iso
+C0267,Bùi Quân,bùi.quân59@example.com,0900200396,Female,1985-09-13,Can Tho,2025-12-29,forced_dmy
+C0268,Phạm Minh,,0910552102,Female,1960-10-01,Ha Noi,2024-06-10,ambiguous_assumed_dmy
+C0269,Đặng Lan,đặng.lan232@example.com,0970795755,Female,1991-03-05,Da Nang,2026-04-15,ambiguous_assumed_dmy
+C0270,Nguyễn Mai,nguyễn.mai990@example.com,0914102989,Female,1982-06-10,Hai Phong,2025-12-11,iso
+C0271,Bùi Trang,bùi.trang529@example.com,0978423727,Male,1988-04-28,Da Nang,2025-02-26,forced_mdy
+C0272,Phạm Minh,phạm.minh700@example.com,0903735132,Female,1984-02-21,Bac Ninh,2024-07-06,forced_mdy
+C0273,Phạm Linh,phạm.linh783@example.com,0932226119,Male,2004-03-13,Ha Noi,2025-09-20,forced_dmy
+C0274,Vũ Tuấn,vũ.tuấn434@example.com,0978499225,Male,1964-09-11,Quang Ninh,2025-06-22,ambiguous_assumed_dmy
+C0275,Đặng Hùng,đặng.hùng883@example.com,0969646025,Male,1989-12-03,Can Tho,2025-01-05,ambiguous_assumed_dmy
+C0276,Phạm Mai,phạm.mai185@example.com,0969314473,Male,1995-09-12,Hai Phong,2024-10-13,ambiguous_assumed_dmy
+C0277,Phạm Dũng,phạm.dũng512@example.com,0982243191,Female,1960-11-15,Hai Phong,2024-06-29,forced_dmy
+C0278,Hoàng Bình,hoàng.bình574@example.com,0960122807,Male,1983-04-22,Da Nang,2025-01-04,forced_dmy
+C0279,Đặng Dũng,đặng.dũng523@example.com,0938915617,Female,1991-11-10,Bac Ninh,2024-11-28,iso
+C0280,Hoàng Trang,hoàng.trang352@example.com,0989869464,Female,1966-05-26,Ho Chi Minh City,2024-03-22,forced_dmy
+C0281,Hoàng Phương,hoàng.phương241@example.com,0938797541,Male,1962-01-26,Bac Ninh,2024-05-08,forced_mdy
+C0282,Trần Lan,trần.lan633@example.com,0913094075,Female,1967-06-20,Da Nang,2024-04-16,forced_mdy
+C0283,Hoàng Linh,hoàng.linh479@example.com,0917415103,Male,1989-05-03,Hai Phong,2026-06-03,ambiguous_assumed_dmy
+C0284,Lê Hùng,lê.hùng233@example.com,0975665563,Female,1991-02-23,Can Tho,2025-05-08,forced_dmy
+C0285,Đặng Mai,đặng.mai307@example.com,0913088340,Male,2004-02-18,Hai Phong,2026-02-12,forced_dmy
+C0286,Phạm An,phạm.an82@example.com,0973453173,Female,1993-11-12,Da Nang,2024-08-13,ambiguous_assumed_dmy
+C0287,Hoàng Mai,hoàng.mai20@example.com,0961011447,Male,2004-02-20,Da Nang,2024-07-11,forced_mdy
+C0288,Lê Dũng,lê.dũng511@example.com,0932772143,Female,1987-12-14,Quang Ninh,2026-03-15,forced_mdy
+C0289,Vũ Chi,vũ.chi732@example.com,0910704188,Male,1961-02-17,Quang Ninh,2024-05-04,forced_dmy
+C0290,Nguyễn Lan,nguyễn.lan44@example.com,0967062399,Female,1974-03-25,Bac Ninh,2025-10-06,forced_dmy
+C0291,Hoàng Lan,hoàng.lan406@example.com,0938821631,Male,1984-10-08,Ha Noi,2025-08-21,iso
+C0292,Bùi Hà,bùi.hà661@example.com,0937246397,Female,1965-05-21,Da Nang,2024-03-02,iso
+C0293,Phạm Nam,phạm.nam497@example.com,0977784163,Female,1972-01-02,Ha Noi,2024-09-13,ambiguous_assumed_dmy
+C0294,Đỗ Tuấn,đỗ.tuấn159@example.com,0915534858,Male,1974-05-21,Can Tho,2024-03-11,forced_dmy
+C0295,Vũ Trang,vũ.trang675@example.com,0907578636,Male,1988-10-08,Ha Noi,2026-01-08,iso
+C0296,Bùi Hà,bùi.hà207@example.com,0972430609,Female,1976-01-10,Ha Noi,2026-06-13,iso
+C0297,Nguyễn Phương,nguyễn.phương951@example.com,0984650270,Female,1978-09-22,Hai Phong,2025-11-02,forced_mdy
+C0298,Vũ Quân,vũ.quân104@example.com,0937065780,Female,1979-05-15,Ha Noi,2025-06-15,forced_mdy
+C0299,Phạm Lan,phạm.lan720@example.com,0976595577,Male,,Hai Phong,2025-11-21,iso_out_of_range(raw=1890-01-01)
+C0300,Lê Phương,lê.phương423@example.com,0973194339,Male,1989-02-15,Da Nang,2026-05-15,forced_mdy
+C0301,Phạm Lan,phạm.lan531@example.com,0967929437,Male,1985-07-09,Ha Noi,2025-09-02,iso
+C0302,Phạm Lan,phạm.lan472@example.com,0930862559,Male,1973-11-17,Ha Noi,2024-04-06,iso
+C0303,Vũ Linh,vũ.linh846@example.com,0912355203,Female,2003-04-16,Hai Phong,2024-06-26,forced_mdy
+C0304,Hoàng Bình,hoàng.bình233@example.com,0988379384,Male,1970-10-24,Quang Ninh,2026-06-09,forced_mdy
+C0305,Đặng Bình,đặng.bình610@example.com,0935353616,Female,1995-03-31,Quang Ninh,2025-04-01,iso
+C0306,Hoàng Phương,hoàng.phương493@example.com,0911050305,Female,1971-09-12,Ho Chi Minh City,2026-02-19,ambiguous_assumed_dmy
+C0307,Phạm Linh,phạm.linh353@example.com,0910739064,Male,1991-04-01,,2024-07-14,ambiguous_assumed_dmy
+C0308,Vũ Trang,vũ.trang249@example.com,0971081378,Male,1970-01-30,Ha Noi,2026-01-27,forced_dmy
+C0309,Vũ Dũng,vũ.dũng145@example.com,0934025252,Male,2003-05-02,Bac Ninh,2025-09-29,ambiguous_assumed_dmy
+C0310,Đỗ Bình,đỗ.bình679@example.com,0931276060,Female,1994-11-13,Da Nang,2025-11-07,iso
+C0311,Hoàng Phương,hoàng.phương575@example.com,0919579450,Male,1977-11-03,Hai Phong,2025-05-27,iso
+C0312,Đỗ Minh,đỗ.minh64@example.com,0934706339,Male,2004-12-20,Quang Ninh,2024-10-09,forced_dmy
+C0313,Đỗ Mai,đỗ.mai587@example.com,0911860396,Male,1980-05-27,Ho Chi Minh City,2025-03-03,forced_dmy
+C0314,Vũ Trang,vũ.trang149@example.com,0971656216,Male,1972-02-18,Quang Ninh,2025-03-16,forced_dmy
+C0315,Đỗ Dũng,đỗ.dũng916@example.com,0913877844,Male,1999-09-29,Quang Ninh,2026-02-02,iso
+C0316,Trần Hà,trần.hà705@example.com,0910966652,Male,1962-04-05,Ha Noi,2025-01-02,ambiguous_assumed_dmy
+C0317,Bùi Nga,bùi.nga761@example.com,0918411070,Female,1984-03-17,Ho Chi Minh City,2025-02-26,iso
+C0318,Lê Trang,lê.trang404@example.com,0974342407,Male,1994-02-15,Da Nang,2026-01-07,forced_mdy
+C0319,Bùi Trang,bùi.trang451@example.com,0908259037,Male,1964-06-03,Da Nang,2024-07-13,ambiguous_assumed_dmy
+C0320,Lê Quân,lê.quân600@example.com,0936051847,Male,1970-02-25,,2024-07-03,forced_dmy
+C0321,Vũ Trang,vũ.trang127@example.com,0901572426,Female,1974-09-17,Bac Ninh,2026-01-05,forced_mdy
+C0322,Vũ Chi,vũ.chi893@example.com,0977796150,Male,1975-05-01,Can Tho,2024-12-09,iso
+C0323,Lê Bình,lê.bình260@example.com,0963792189,Female,1960-04-25,Quang Ninh,2025-09-29,forced_dmy
+C0324,Đỗ An,đỗ.an635@example.com,0978254406,Female,1981-12-14,Da Nang,2025-07-14,iso
+C0325,Lê Bình,lê.bình166@example.com,0983105630,Male,,Ho Chi Minh City,2025-03-02,invalid_date
+C0326,Đỗ Hùng,đỗ.hùng67@example.com,0967307388,Female,1998-05-03,Can Tho,2026-05-13,iso
+C0327,Hoàng Nam,hoàng.nam706@example.com,0974220595,Male,1967-11-12,Bac Ninh,2025-05-10,ambiguous_assumed_dmy
+C0328,Vũ Mai,vũ.mai726@example.com,0975696474,Female,1976-02-21,Ho Chi Minh City,2025-09-16,iso
+C0329,Nguyễn Trang,nguyễn.trang207@example.com,0987726403,Male,1979-01-18,Bac Ninh,2024-01-12,forced_dmy
+C0330,Hoàng Minh,hoàng.minh854@example.com,0975713359,Female,1975-10-04,Da Nang,2024-07-17,ambiguous_assumed_dmy
+C0331,Lê Tuấn,lê.tuấn695@example.com,0916853747,Male,1986-11-08,Bac Ninh,2025-08-01,iso
+C0332,Vũ Nga,vũ.nga120@example.com,0909209685,Female,1994-12-13,Can Tho,2024-07-10,forced_mdy
+C0333,Hoàng Quân,hoàng.quân936@example.com,0904249231,Female,1963-10-05,Ho Chi Minh City,2026-03-07,ambiguous_assumed_dmy
+C0334,Bùi Hà,bùi.hà38@example.com,0913483370,Male,1971-11-27,Bac Ninh,2024-07-29,forced_mdy
+C0335,Trần An,trần.an777@example.com,0939650405,Female,1988-01-13,Can Tho,2024-01-24,forced_dmy
+C0336,Phạm Minh,phạm.minh359@example.com,0935762119,Female,1969-03-08,Can Tho,2024-07-30,ambiguous_assumed_dmy
+C0337,Hoàng Linh,hoàng.linh89@example.com,0910634146,Male,1969-07-03,Ha Noi,2025-01-27,iso
+C0338,Bùi Nga,bùi.nga822@example.com,0933178097,Female,1971-10-28,Quang Ninh,2024-04-05,iso
+C0339,Hoàng Trang,hoàng.trang904@example.com,0962286936,Female,1989-08-20,Quang Ninh,2026-03-18,forced_dmy
+C0340,Trần Tuấn,trần.tuấn666@example.com,0903417611,Male,1969-06-08,Can Tho,2024-11-29,ambiguous_assumed_dmy
+C0341,Đặng Quân,đặng.quân351@example.com,0916593385,Female,1999-01-21,Quang Ninh,2025-08-03,iso
+C0342,Trần Tuấn,trần.tuấn611@example.com,0905458190,Female,1969-10-03,Quang Ninh,2025-12-02,ambiguous_assumed_dmy
+C0343,Nguyễn Chi,nguyễn.chi592@example.com,0918896011,Female,1986-02-24,Can Tho,2025-02-03,iso
+C0344,Vũ Minh,vũ.minh414@example.com,0977699799,Male,1960-09-23,Can Tho,2025-09-18,iso
+C0345,Đỗ Bình,đỗ.bình729@example.com,0907838827,Male,1995-05-16,Da Nang,2025-10-02,forced_dmy
+C0346,Đỗ Lan,đỗ.lan74@example.com,0981158342,Male,1971-04-06,,2024-05-17,iso
+C0347,Đặng Hà,đặng.hà566@example.com,0901888696,Male,2000-10-06,Hai Phong,2025-06-05,ambiguous_assumed_dmy
+C0348,Lê Quân,lê.quân495@example.com,0970477295,Female,1963-01-01,Can Tho,2024-02-08,iso
+C0349,Bùi Chi,bùi.chi646@example.com,0917587255,Female,1967-08-12,Hai Phong,2024-09-08,ambiguous_assumed_dmy
+C0350,Đỗ Minh,đỗ.minh302@example.com,0970374547,Male,1997-10-08,Quang Ninh,2024-12-27,iso
+C0351,Hoàng Mai,hoàng.mai518@example.com,0906556270,Male,2003-06-28,Ho Chi Minh City,2024-03-25,forced_dmy
+C0352,Hoàng Mai,hoàng.mai242@example.com,0930115148,Male,1983-09-06,Bac Ninh,2026-03-12,ambiguous_assumed_dmy
+C0353,Vũ Chi,vũ.chi752@example.com,0915887436,Male,1975-03-01,Can Tho,2024-08-03,ambiguous_assumed_dmy
+C0354,Trần Bình,trần.bình149@example.com,0914449926,Male,1994-12-29,Da Nang,2025-04-30,iso
+C0355,Bùi Phương,bùi.phương274@example.com,0983590538,Male,1984-06-15,Da Nang,2024-12-09,forced_mdy
+C0356,Bùi Linh,bùi.linh13@example.com,0986756930,Female,1960-04-10,Ha Noi,2026-05-01,ambiguous_assumed_dmy
+C0357,Bùi Nga,bùi.nga125@example.com,0917206058,Female,1979-06-14,Bac Ninh,2025-09-05,iso
+C0358,Lê Phương,lê.phương945@example.com,0987681112,Male,1966-10-17,Hai Phong,2025-10-16,forced_mdy
+C0359,Vũ Mai,vũ.mai504@example.com,0917203928,Male,1975-12-18,Ha Noi,2025-03-27,iso
+C0360,Trần Hà,trần.hà20@example.com,0977269710,Male,1982-06-25,Hai Phong,2026-03-06,forced_mdy
+C0361,Nguyễn Bình,nguyễn.bình865@example.com,0983133077,Female,2002-11-23,Hai Phong,2025-03-22,forced_mdy
+C0362,Nguyễn Phương,,0988459364,Female,1968-02-18,Can Tho,2025-01-09,forced_dmy
+C0363,Phạm Hùng,phạm.hùng753@example.com,0970316863,Male,1967-08-12,Hai Phong,2025-10-09,iso
+C0364,Nguyễn Linh,nguyễn.linh58@example.com,0963764989,Male,1961-06-21,Da Nang,2024-02-07,forced_dmy
+C0365,Phạm Trang,phạm.trang47@example.com,0988572074,Male,1961-09-16,Can Tho,2025-04-27,iso
+C0366,Nguyễn Minh,nguyễn.minh208@example.com,0904158147,Female,1979-10-15,Quang Ninh,2024-03-05,forced_mdy
+C0367,Đặng Nam,đặng.nam281@example.com,0909518775,Male,1990-02-05,Ha Noi,2024-03-05,iso
+C0368,Đỗ Hùng,đỗ.hùng8@example.com,0962517631,Female,2003-08-09,Ha Noi,2024-03-23,ambiguous_assumed_dmy
+C0369,Hoàng Quân,hoàng.quân39@example.com,0988762654,Male,1975-08-29,Bac Ninh,2025-09-17,forced_mdy
+C0370,Trần Minh,trần.minh642@example.com,0934519968,Female,1979-09-03,Quang Ninh,2025-04-20,ambiguous_assumed_dmy
+C0371,Phạm Dũng,phạm.dũng258@example.com,0916941606,Female,1985-07-28,Hai Phong,2024-08-02,iso
+C0372,Nguyễn Hùng,,0917418753,Female,1977-10-30,Bac Ninh,2026-02-04,iso
+C0373,Phạm Dũng,phạm.dũng466@example.com,0917832448,Male,1973-01-01,Can Tho,2024-08-09,ambiguous_assumed_dmy
+C0374,Bùi Lan,bùi.lan176@example.com,0983230521,Female,2001-10-06,Hai Phong,2025-04-14,ambiguous_assumed_dmy
+C0375,Lê Hùng,,0979808495,Female,2001-07-07,Ha Noi,2024-10-12,iso
+C0376,Đặng Linh,đặng.linh404@example.com,0979984097,Female,1963-01-06,Can Tho,2025-03-11,ambiguous_assumed_dmy
+C0377,Phạm Chi,phạm.chi313@example.com,0977642329,Female,1961-05-06,Bac Ninh,2025-05-06,ambiguous_assumed_dmy
+C0378,Nguyễn Trang,,0967847346,Male,1966-05-05,Bac Ninh,2025-01-29,ambiguous_assumed_dmy
+C0379,Hoàng Lan,hoàng.lan477@example.com,0980870968,Male,1969-12-15,Da Nang,2025-01-27,forced_dmy
+C0380,Lê Chi,lê.chi780@example.com,0977292149,Female,1978-10-27,Bac Ninh,2026-02-10,forced_dmy
+C0381,Đỗ Quân,đỗ.quân377@example.com,0930345845,Female,1986-03-21,Can Tho,2025-04-07,iso
+C0382,Trần Chi,trần.chi24@example.com,0968291264,Male,1978-04-29,Bac Ninh,2025-06-17,forced_mdy
+C0383,Lê Tuấn,lê.tuấn352@example.com,0934701088,Female,1990-02-18,Can Tho,2025-02-25,forced_dmy
+C0384,Đỗ Trang,đỗ.trang292@example.com,0963171249,Male,1964-03-30,Da Nang,2024-05-31,forced_mdy
+C0385,Đỗ Minh,đỗ.minh452@example.com,0919866120,Female,1988-05-28,Ho Chi Minh City,2025-08-11,iso
+C0386,Đỗ Bình,đỗ.bình149@example.com,0983335139,Female,1996-04-17,Quang Ninh,2025-05-26,iso
+C0387,Đỗ Nam,đỗ.nam116@example.com,0987429951,Female,1999-08-30,Bac Ninh,2024-12-12,iso
+C0388,Đỗ Dũng,đỗ.dũng285@example.com,0930623361,Male,1979-12-06,Quang Ninh,2026-03-11,iso
+C0389,Bùi Chi,,0973465063,Male,1998-05-13,Hai Phong,2025-01-13,forced_dmy
+C0390,Hoàng Trang,hoàng.trang143@example.com,0970749828,Female,1998-01-09,Hai Phong,2026-01-16,iso
+C0391,Hoàng Tuấn,hoàng.tuấn474@example.com,0979097049,Male,1997-03-09,Can Tho,2024-06-28,iso
+C0392,Đặng Minh,đặng.minh308@example.com,0974835472,Female,1960-03-21,Da Nang,2024-06-06,iso
+C0393,Đặng Hùng,đặng.hùng580@example.com,0969607495,Male,1992-06-15,Hai Phong,2025-08-18,forced_mdy
+C0394,Bùi Dũng,bùi.dũng55@example.com,0935581038,Female,1972-02-26,Ho Chi Minh City,2024-12-31,forced_dmy
+C0395,Nguyễn Minh,,0935957107,Male,1988-12-10,,2026-06-12,ambiguous_assumed_dmy
+C0396,Trần Nga,trần.nga852@example.com,0910534391,Female,1973-11-12,Ho Chi Minh City,2025-05-30,ambiguous_assumed_dmy
+C0397,Trần Dũng,trần.dũng312@example.com,0919433885,Female,1990-09-08,Bac Ninh,2024-06-25,iso
+C0398,Lê Linh,lê.linh111@example.com,0931106707,Male,1998-09-09,Ho Chi Minh City,2024-02-13,ambiguous_assumed_dmy
+C0399,Hoàng Bình,hoàng.bình150@example.com,0903001652,Male,1991-07-16,Ha Noi,2024-01-30,forced_mdy
+C0400,Vũ Hùng,vũ.hùng924@example.com,0977650875,Male,1977-08-03,Ho Chi Minh City,2024-10-15,ambiguous_assumed_dmy
+C0401,Phạm Tuấn,phạm.tuấn780@example.com,0936161894,Female,1980-05-31,Ha Noi,2025-02-21,forced_dmy
+C0402,Đỗ Hà,đỗ.hà455@example.com,0967750312,Male,1987-12-28,Quang Ninh,2025-12-04,forced_dmy
+C0403,Phạm Chi,phạm.chi405@example.com,0969306635,Female,1967-08-17,Ho Chi Minh City,2024-05-02,forced_mdy
+C0404,Trần Nga,trần.nga821@example.com,0913591872,Male,1984-06-27,Quang Ninh,2026-02-13,forced_dmy
+C0405,Đặng Tuấn,đặng.tuấn851@example.com,0972712461,Female,1968-07-12,Ha Noi,2026-01-25,ambiguous_assumed_dmy
+C0406,Lê Phương,lê.phương678@example.com,0976160077,Female,2001-10-22,Da Nang,2024-07-25,forced_mdy
+C0407,Đỗ Nam,,0975904933,Male,1993-05-10,Hai Phong,2025-03-29,ambiguous_assumed_dmy
+C0408,Hoàng Hùng,hoàng.hùng875@example.com,0964337545,Male,2002-02-24,Can Tho,2025-05-02,forced_dmy
+C0409,Bùi Phương,bùi.phương350@example.com,0976720513,Female,1962-05-31,Bac Ninh,2026-02-22,forced_dmy
+C0410,Vũ Quân,vũ.quân21@example.com,0930223068,Female,1970-04-08,Ho Chi Minh City,2024-12-11,iso
+C0411,Đặng Quân,đặng.quân692@example.com,0930403530,Female,2003-10-24,Bac Ninh,2024-04-12,forced_dmy
+C0412,Vũ Hùng,vũ.hùng49@example.com,0972926908,Male,1979-03-16,Da Nang,2024-10-21,iso
+C0413,Trần Nam,trần.nam553@example.com,0930842763,Female,1986-11-27,Bac Ninh,2025-03-19,forced_dmy
+C0414,Hoàng Trang,hoàng.trang546@example.com,0987107852,Male,2001-03-12,Bac Ninh,2024-10-01,ambiguous_assumed_dmy
+C0415,Nguyễn Lan,nguyễn.lan867@example.com,0934277848,Male,1965-10-12,Ho Chi Minh City,2025-10-11,ambiguous_assumed_dmy
+C0416,Hoàng Linh,hoàng.linh207@example.com,0962107349,Male,1997-11-10,Ha Noi,2025-10-24,iso
+C0417,Hoàng Mai,hoàng.mai888@example.com,0985607708,Male,1988-02-29,Da Nang,2025-09-08,forced_dmy
+C0418,Đặng Hà,đặng.hà244@example.com,0911795899,Female,1982-08-04,Ha Noi,2025-05-23,ambiguous_assumed_dmy
+C0419,Đặng Linh,đặng.linh325@example.com,0962122480,Male,1993-08-13,Ha Noi,2025-12-17,forced_dmy
+C0420,Hoàng Hà,hoàng.hà688@example.com,0934336907,Male,1964-11-26,Quang Ninh,2025-12-08,forced_mdy
+C0421,Hoàng Nga,hoàng.nga959@example.com,0981883939,Male,1982-12-04,Ha Noi,2024-11-04,iso
+C0422,Bùi Nam,,0984088944,Male,1989-06-11,Hai Phong,2026-01-04,ambiguous_assumed_dmy
+C0423,Đỗ Chi,đỗ.chi811@example.com,0934753676,Male,1976-06-25,Hai Phong,2025-10-07,iso
+C0424,Phạm Minh,phạm.minh463@example.com,0935127761,Male,1996-10-23,Da Nang,2026-03-22,forced_dmy
+C0425,Vũ Minh,vũ.minh627@example.com,0910333850,Female,1962-01-22,Bac Ninh,2025-07-25,iso
+C0426,Phạm Mai,phạm.mai539@example.com,0988066191,Female,1970-12-07,Bac Ninh,2024-01-15,ambiguous_assumed_dmy
+C0427,Trần Linh,trần.linh844@example.com,0982982734,Female,1978-07-15,Ho Chi Minh City,2025-09-06,forced_dmy
+C0428,Đặng Hà,đặng.hà893@example.com,0902269364,Male,1960-04-12,Ho Chi Minh City,2025-04-25,ambiguous_assumed_dmy
+C0429,Đặng Quân,đặng.quân517@example.com,0985050943,Male,1964-01-31,Da Nang,2024-01-06,forced_dmy
+C0430,Vũ Hà,vũ.hà120@example.com,0970114340,Male,1998-11-03,Da Nang,2024-05-25,iso
+C0431,Hoàng Nga,hoàng.nga783@example.com,0962867238,Female,1988-04-22,,2026-01-24,iso
+C0432,Lê Bình,lê.bình575@example.com,0911414184,Female,1999-08-11,Bac Ninh,2024-12-31,ambiguous_assumed_dmy
+C0433,Lê Dũng,lê.dũng539@example.com,0930811528,Male,1979-01-20,Ha Noi,2025-08-20,forced_dmy
+C0434,Phạm Tuấn,phạm.tuấn158@example.com,0980329139,Female,1969-07-07,Da Nang,2026-05-07,ambiguous_assumed_dmy
+C0435,Bùi Mai,bùi.mai50@example.com,0976306499,Male,1971-08-08,Quang Ninh,2024-08-04,ambiguous_assumed_dmy
+C0436,Trần Phương,trần.phương771@example.com,0903198081,Male,1996-02-06,Bac Ninh,2024-10-18,iso
+C0437,Bùi Quân,bùi.quân488@example.com,0988361685,Male,2003-12-04,Hai Phong,2025-04-01,iso
+C0438,Vũ Hùng,vũ.hùng663@example.com,0966059667,Female,2004-06-08,Bac Ninh,2025-06-23,ambiguous_assumed_dmy
+C0439,Đặng Chi,đặng.chi111@example.com,0963963245,Male,1966-11-12,Can Tho,2024-02-16,ambiguous_assumed_dmy
+C0440,Bùi Mai,bùi.mai427@example.com,0932051611,Male,1995-04-03,Ha Noi,2024-02-16,ambiguous_assumed_dmy
+C0441,Bùi Trang,bùi.trang109@example.com,0978398209,Male,1983-04-07,Bac Ninh,2026-06-11,iso
+C0442,Trần An,trần.an987@example.com,0916446773,Male,1992-05-12,Bac Ninh,2025-12-08,ambiguous_assumed_dmy
+C0443,Lê Hà,lê.hà642@example.com,0901861041,Female,1981-09-09,Quang Ninh,2025-03-22,iso
+C0444,Bùi Hà,bùi.hà207@example.com,0964197440,Male,2000-04-29,Ho Chi Minh City,2025-08-22,iso
+C0445,Nguyễn Dũng,nguyễn.dũng498@example.com,0988444579,Female,1963-04-27,Hai Phong,2025-05-14,iso
+C0446,Nguyễn An,nguyễn.an447@example.com,0965526816,Male,1991-02-09,Bac Ninh,2025-04-04,ambiguous_assumed_dmy
+C0447,Phạm Tuấn,phạm.tuấn741@example.com,0934556987,Male,2002-01-10,Da Nang,2024-05-14,ambiguous_assumed_dmy
+C0448,Bùi Hùng,bùi.hùng241@example.com,0972604114,Male,1997-04-26,Da Nang,2025-05-20,iso
+C0449,Hoàng Nga,hoàng.nga499@example.com,0981880046,Female,1970-10-29,Ho Chi Minh City,2025-07-29,forced_dmy
+C0450,Đỗ Mai,đỗ.mai626@example.com,0918861097,Female,1969-12-13,,2024-04-18,forced_mdy
+C0451,Đỗ Dũng,,0916891245,Male,1968-11-27,Bac Ninh,2024-06-06,iso
+C0452,Bùi Quân,bùi.quân252@example.com,0902835037,Male,1992-05-09,Bac Ninh,2025-10-06,iso
+C0453,Đặng Quân,đặng.quân323@example.com,0968956947,Male,1966-03-30,Da Nang,2024-03-27,forced_dmy
+C0454,Đặng Bình,đặng.bình908@example.com,0989159978,Male,1986-07-13,Hai Phong,2025-03-05,forced_mdy
+C0455,Vũ Nga,vũ.nga909@example.com,0908961468,Male,1999-09-01,Da Nang,2025-12-15,iso
+C0456,Trần Bình,trần.bình776@example.com,0973771920,Male,1988-01-05,Da Nang,2025-06-17,iso
+C0457,Đỗ Mai,đỗ.mai775@example.com,0918345782,Female,1991-10-20,Ha Noi,2024-05-06,forced_dmy
+C0458,Nguyễn Trang,nguyễn.trang292@example.com,0939895865,Male,1980-12-23,Da Nang,2024-12-24,forced_mdy
+C0459,Đỗ Linh,đỗ.linh436@example.com,0903583078,Female,1967-05-09,Ha Noi,2024-04-04,iso
+C0460,Trần Nga,trần.nga750@example.com,0985553244,Male,1999-06-25,Hai Phong,2025-12-06,iso
+C0461,Lê Tuấn,lê.tuấn944@example.com,0984955640,Male,1974-01-26,Da Nang,2025-07-26,iso
+C0462,Vũ Minh,vũ.minh911@example.com,0905133201,Female,1997-11-02,Da Nang,2024-02-19,iso
+C0463,Nguyễn Dũng,nguyễn.dũng854@example.com,0973845597,Male,2002-08-20,Bac Ninh,2026-05-04,iso
+C0464,Bùi Trang,bùi.trang47@example.com,0984837642,Female,1995-06-22,Can Tho,2024-12-13,forced_mdy
+C0465,Trần Hùng,trần.hùng194@example.com,0980673660,Male,1964-09-28,Can Tho,2025-08-06,iso
+C0466,Đỗ Hùng,đỗ.hùng47@example.com,0902288505,Male,1988-09-29,Can Tho,2025-02-15,forced_dmy
+C0467,Lê Quân,lê.quân158@example.com,0908321011,Male,1982-05-12,Ha Noi,2026-02-25,ambiguous_assumed_dmy
+C0468,Nguyễn Nam,nguyễn.nam246@example.com,0910033433,Female,1970-11-07,Ho Chi Minh City,2024-02-23,ambiguous_assumed_dmy
+C0469,Đỗ Phương,đỗ.phương987@example.com,0902350069,Female,1961-09-02,Can Tho,2024-10-02,iso
+C0470,Lê Minh,lê.minh985@example.com,0974062939,Female,1981-12-29,Hai Phong,2025-07-04,iso
+C0471,Bùi Minh,bùi.minh218@example.com,0989094583,Male,1991-07-12,Bac Ninh,2026-05-12,iso
+C0472,Đỗ Chi,,0930687982,Female,1988-07-22,Da Nang,2025-11-29,forced_dmy
+C0473,Vũ Nam,vũ.nam424@example.com,0914506604,Female,1960-11-09,,2025-11-19,ambiguous_assumed_dmy
+C0474,Trần Chi,trần.chi860@example.com,0970866388,Male,1992-02-11,Ho Chi Minh City,2025-01-31,iso
+C0475,Vũ Lan,vũ.lan227@example.com,0960776718,Female,1987-03-14,Bac Ninh,2026-04-07,forced_dmy
+C0476,Hoàng Tuấn,hoàng.tuấn199@example.com,0987218385,Male,2004-04-26,Can Tho,2024-06-23,iso
+C0477,Lê Chi,lê.chi905@example.com,0912525716,Male,1982-09-09,Can Tho,2025-11-28,ambiguous_assumed_dmy
+C0478,Nguyễn Nam,nguyễn.nam941@example.com,0968415450,Female,1980-02-22,Da Nang,2024-02-18,forced_dmy
+C0479,Đặng Lan,đặng.lan338@example.com,0930507940,Female,1982-05-06,Ho Chi Minh City,2024-07-20,ambiguous_assumed_dmy
+C0480,Nguyễn Tuấn,nguyễn.tuấn842@example.com,0968563212,Female,1990-07-29,Ha Noi,2026-05-02,iso
+C0481,Bùi Dũng,bùi.dũng453@example.com,0984199386,Male,1971-11-06,Quang Ninh,2024-03-04,ambiguous_assumed_dmy
+C0482,Đặng Chi,đặng.chi476@example.com,0906523072,Female,1960-12-13,Hai Phong,2025-04-09,forced_dmy
+C0483,Nguyễn Trang,nguyễn.trang263@example.com,0973115071,Male,1971-04-21,Can Tho,2025-10-14,forced_dmy
+C0484,Bùi Hùng,bùi.hùng317@example.com,0911015563,Female,1973-01-23,Hai Phong,2024-05-30,forced_dmy
+C0485,Nguyễn Hà,nguyễn.hà350@example.com,0902850396,Female,1978-01-20,Ha Noi,2026-03-15,forced_mdy
+C0486,Vũ Nam,vũ.nam478@example.com,0972318949,Female,1980-01-04,Ho Chi Minh City,2025-12-10,iso
+C0487,Vũ Phương,vũ.phương600@example.com,0914800351,Male,1999-07-06,Bac Ninh,2024-07-18,iso
+C0488,Phạm Minh,phạm.minh852@example.com,0912218211,Male,1983-06-27,Ha Noi,2024-04-13,forced_dmy
+C0489,Vũ Lan,vũ.lan67@example.com,0934331576,Male,1998-11-29,Bac Ninh,2026-06-18,iso
+C0490,Phạm Phương,phạm.phương336@example.com,0983592061,Male,1986-05-23,Ho Chi Minh City,2026-03-19,forced_mdy
+C0491,Lê Tuấn,lê.tuấn476@example.com,0917776138,Female,1993-07-29,Can Tho,2025-05-25,forced_mdy
+C0492,Đỗ Tuấn,đỗ.tuấn241@example.com,0989456762,Female,1978-03-18,Quang Ninh,2025-04-07,forced_dmy
+C0493,Đặng Hùng,đặng.hùng479@example.com,0932072520,Male,1990-03-06,Hai Phong,2025-03-12,ambiguous_assumed_dmy
+C0494,Vũ Mai,vũ.mai949@example.com,0960420925,Female,1967-01-05,Da Nang,2026-03-15,iso
+C0495,Vũ Bình,vũ.bình734@example.com,0972133862,Male,1972-05-14,,2026-05-25,iso
+C0496,Hoàng Nga,,0969870699,Female,1995-08-30,Ho Chi Minh City,2024-08-21,forced_dmy
+C0497,Đỗ Trang,đỗ.trang572@example.com,0988308494,Female,1999-05-10,Quang Ninh,2025-04-05,iso
+C0498,Lê Minh,lê.minh24@example.com,0980883464,Male,1986-11-18,Can Tho,2024-11-29,iso
+C0499,Vũ Phương,vũ.phương107@example.com,0962351154,Male,1987-05-01,,2024-04-05,iso
+C0500,Bùi An,bùi.an176@example.com,0911932254,Male,1993-01-26,Ha Noi,2025-06-14,forced_dmy

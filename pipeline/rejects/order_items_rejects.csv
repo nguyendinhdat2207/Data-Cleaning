@@ -1,0 +1,61 @@
+order_id,product_id,quantity,unit_price,reject_reason
+O00047,P995,5,1472000.0,product_id not found in products.csv (FK violation)
+O00062,P031,4,0.0,"unit_price must be positive, got '0.0'"
+O00106,P092,2,826000.0,parent order was rejected during orders cleaning (cascade)
+O00106,P026,3,2865000.0,parent order was rejected during orders cleaning (cascade)
+O00106,P052,1,441000.0,parent order was rejected during orders cleaning (cascade)
+O00190,P992,1,1112000.0,product_id not found in products.csv (FK violation)
+O00197,P054,3,892000.0,parent order was rejected during orders cleaning (cascade)
+O00197,P063,2,169000.0,parent order was rejected during orders cleaning (cascade)
+O00238,P074,-1,3286000.0,"quantity must be a positive integer, got '-1'"
+O00257,P999,3,685000.0,product_id not found in products.csv (FK violation)
+O99532,P066,1,841000.0,order_id not found in orders.csv (FK violation)
+O99894,P007,3,3201000.0,order_id not found in orders.csv (FK violation)
+O00279,P998,1,1039000.0,product_id not found in products.csv (FK violation)
+O00312,P006,5,3589000.0,parent order was rejected during orders cleaning (cascade)
+O00312,P046,2,2288000.0,parent order was rejected during orders cleaning (cascade)
+O00312,P092,1,826000.0,parent order was rejected during orders cleaning (cascade)
+O00315,P023,0,415000.0,"quantity must be a positive integer, got '0'"
+O00355,P038,4,3122000.0,parent order was rejected during orders cleaning (cascade)
+O00368,P993,3,1343000.0,product_id not found in products.csv (FK violation)
+O00513,P032,0,3853000.0,"quantity must be a positive integer, got '0'"
+O00522,P092,5,0.0,"unit_price must be positive, got '0.0'"
+O00573,P048,0,1507000.0,"quantity must be a positive integer, got '0'"
+O00573,P048,4,-10000.0,"unit_price must be positive, got '-10000.0'"
+O00592,P083,1,590000.0,parent order was rejected during orders cleaning (cascade)
+O00592,P089,5,884000.0,parent order was rejected during orders cleaning (cascade)
+O99405,P016,2,3419000.0,order_id not found in orders.csv (FK violation)
+O99805,P032,1,3853000.0,order_id not found in orders.csv (FK violation)
+O00652,P990,5,873000.0,product_id not found in products.csv (FK violation)
+O00867,P067,-2,1425000.0,"quantity must be a positive integer, got '-2'"
+O00882,P097,4,2654000.0,parent order was rejected during orders cleaning (cascade)
+O00923,P998,2,141000.0,product_id not found in products.csv (FK violation)
+O99656,P033,5,3829000.0,order_id not found in orders.csv (FK violation)
+O00959,P084,4,2331000.0,parent order was rejected during orders cleaning (cascade)
+O00984,P088,-2,4955000.0,"quantity must be a positive integer, got '-2'"
+O01013,P004,1,0.0,"unit_price must be positive, got '0.0'"
+O01030,P040,4,873000.0,parent order was rejected during orders cleaning (cascade)
+O01071,P039,2,197000.0,parent order was rejected during orders cleaning (cascade)
+O01071,P050,1,4410000.0,parent order was rejected during orders cleaning (cascade)
+O01071,P001,4,796000.0,parent order was rejected during orders cleaning (cascade)
+O01071,P002,2,3788000.0,parent order was rejected during orders cleaning (cascade)
+O01088,P003,-3,2471000.0,"quantity must be a positive integer, got '-3'"
+O01097,P994,2,4842000.0,product_id not found in products.csv (FK violation)
+O01111,P095,4,1138000.0,parent order was rejected during orders cleaning (cascade)
+O01117,P078,-3,1472000.0,"quantity must be a positive integer, got '-3'"
+O01156,P089,2,-10000.0,"unit_price must be positive, got '-10000.0'"
+O01301,P041,-1,2459000.0,"quantity must be a positive integer, got '-1'"
+O01311,P998,4,1746000.0,product_id not found in products.csv (FK violation)
+O01363,P088,3,4955000.0,parent order was rejected during orders cleaning (cascade)
+O01363,P081,1,3238000.0,parent order was rejected during orders cleaning (cascade)
+O01363,P085,4,3072000.0,parent order was rejected during orders cleaning (cascade)
+O01363,P069,5,3455000.0,parent order was rejected during orders cleaning (cascade)
+O99713,P056,1,479000.0,order_id not found in orders.csv (FK violation)
+O01414,P008,0,1552000.0,"quantity must be a positive integer, got '0'"
+O01461,P009,-1,4708000.0,"quantity must be a positive integer, got '-1'"
+O01465,P992,5,1486000.0,product_id not found in products.csv (FK violation)
+O01490,P082,1,3808000.0,parent order was rejected during orders cleaning (cascade)
+O01490,P078,4,1472000.0,parent order was rejected during orders cleaning (cascade)
+O01490,P077,4,2971000.0,parent order was rejected during orders cleaning (cascade)
+O01490,P074,4,3286000.0,parent order was rejected during orders cleaning (cascade)
+O01491,P035,0,2034000.0,"quantity must be a positive integer, got '0'"
