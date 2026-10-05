@@ -1,10 +1,13 @@
-"""Shared helpers for the cleaning pipeline."""
+"""Các hàm dùng chung cho pipeline: đọc/ghi CSV và các hàm làm sạch từng loại giá trị."""
 import csv
 import re
 import unicodedata
 from datetime import datetime
 from pathlib import Path
 
+# ---------------------------------------------------------------------------
+# Đường dẫn thư mục. raw/ là dữ liệu gốc, không bao giờ bị ghi đè.
+# ---------------------------------------------------------------------------
 ROOT = Path(__file__).parent
 RAW = ROOT / "raw"
 CLEAN = ROOT / "clean"
@@ -14,9 +17,13 @@ REPORTS = ROOT / "reports"
 for d in (CLEAN, REJECTS, REPORTS):
     d.mkdir(exist_ok=True)
 
+# Ngày "hôm nay" cố định để chạy lại lúc nào cũng ra cùng kết quả.
 TODAY = datetime(2026, 9, 21)
 
 
+# ---------------------------------------------------------------------------
+# Đọc / ghi CSV
+# ---------------------------------------------------------------------------
 def load(name, folder=RAW):
     with open(folder / name, newline="", encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
@@ -32,24 +39,23 @@ def save(rows, name, folder, fieldnames):
     return path
 
 
+# Bỏ dấu tiếng Việt để so khớp: "Nữ" -> "Nu", "Hà Nội" -> "Ha Noi".
 def strip_accents(s):
     nfkd = unicodedata.normalize("NFD", s)
     return "".join(c for c in nfkd if unicodedata.category(c) != "Mn")
 
 
+# ---------------------------------------------------------------------------
+# SỬA NGÀY THÁNG (birth_date, order_date)
+# Dữ liệu trộn 3 định dạng: YYYY-MM-DD, DD/MM/YYYY, MM/DD/YYYY.
+# Trả về (ngày | None, ghi chú cách đọc). Ghi chú được lưu vào cột *_format_note.
+#   - "iso"                    : đã đúng YYYY-MM-DD
+#   - "forced_dmy"/"forced_mdy": một trong hai số > 12 nên chỉ có một cách đọc
+#   - "ambiguous_assumed_dmy"  : cả hai số <= 12, đọc được 2 cách -> GIẢ ĐỊNH DD/MM
+#                                (quy ước Việt Nam). Có gắn cờ để xem lại sau.
+#   - "invalid_*", "empty"...  : không đọc được -> trả về None
+# ---------------------------------------------------------------------------
 def parse_flex_date(v, default_day_first=True):
-    """Parse a date that may be ISO (YYYY-MM-DD) or DD/MM/YYYY or MM/DD/YYYY.
-
-    Returns (datetime | None, note) where note explains how it was resolved.
-    Disambiguation rule (documented assumption, see README of pipeline/reports):
-      - ISO strings are trusted as-is.
-      - For "xx/xx/yyyy" strings, if one of the two first fields is >12 it can only
-        be a day, so the format is forced unambiguously.
-      - If both fields are <=12 the format is genuinely ambiguous; we default to
-        DD/MM/YYYY (Vietnamese locale convention, and the majority pattern among the
-        rows where the format IS unambiguous in this dataset). This is a documented
-        assumption, not a certainty -- ambiguous rows are flagged in the QA log.
-    """
     v = v.strip()
     if not v:
         return None, "empty"
@@ -64,34 +70,30 @@ def parse_flex_date(v, default_day_first=True):
     if not m:
         return None, "unrecognized_format"
 
-    a, b, y = int(m.group(1)), int(m.group(2)), int(m.group(3))
-    a_ok_as_day = 1 <= a <= 31
-    b_ok_as_month = 1 <= b <= 12
-    a_ok_as_month = 1 <= a <= 12
-    b_ok_as_day = 1 <= b <= 31
-
-    dmy_valid = a_ok_as_day and b_ok_as_month
-    mdy_valid = a_ok_as_month and b_ok_as_day
+    a, b = int(m.group(1)), int(m.group(2))
+    dmy_valid = 1 <= a <= 31 and 1 <= b <= 12
+    mdy_valid = 1 <= a <= 12 and 1 <= b <= 31
 
     if dmy_valid and not mdy_valid:
-        try:
-            return datetime.strptime(v, "%d/%m/%Y"), "forced_dmy"
-        except ValueError:
-            return None, "invalid_date"
-    if mdy_valid and not dmy_valid:
-        try:
-            return datetime.strptime(v, "%m/%d/%Y"), "forced_mdy"
-        except ValueError:
-            return None, "invalid_date"
-    if dmy_valid and mdy_valid:
+        fmt, note = "%d/%m/%Y", "forced_dmy"
+    elif mdy_valid and not dmy_valid:
+        fmt, note = "%m/%d/%Y", "forced_mdy"
+    elif dmy_valid and mdy_valid:
         fmt = "%d/%m/%Y" if default_day_first else "%m/%d/%Y"
-        try:
-            return datetime.strptime(v, fmt), "ambiguous_assumed_dmy"
-        except ValueError:
-            return None, "invalid_date"
-    return None, "invalid_date"
+        note = "ambiguous_assumed_dmy"
+    else:
+        return None, "invalid_date"
+
+    # strptime báo lỗi với ngày không tồn tại, ví dụ 31/02/2001.
+    try:
+        return datetime.strptime(v, fmt), note
+    except ValueError:
+        return None, "invalid_date"
 
 
+# ---------------------------------------------------------------------------
+# SỬA EMAIL: giá trị rác (N/A, -, unknown) hoặc sai định dạng -> rỗng.
+# ---------------------------------------------------------------------------
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 JUNK_TOKENS = {"n/a", "na", "-", "unknown", "none", "null", ""}
 
@@ -105,6 +107,10 @@ def clean_email(v):
     return v, "ok"
 
 
+# ---------------------------------------------------------------------------
+# SỬA SỐ ĐIỆN THOẠI: bỏ khoảng trắng/dấu gạch, đổi +84 hoặc 84 thành 0,
+# kết quả chuẩn là 0XXXXXXXXX (10 số).
+# ---------------------------------------------------------------------------
 def clean_phone(v):
     v = (v or "").strip()
     if not v:
@@ -119,9 +125,12 @@ def clean_phone(v):
     return digits, "nonstandard_length"
 
 
+# ---------------------------------------------------------------------------
+# SỬA GIỚI TÍNH: 8 cách viết (male, M, Nam, Nữ, F...) -> Male / Female.
+# ---------------------------------------------------------------------------
 GENDER_MAP = {
     "male": "Male", "m": "Male", "nam": "Male",
-    "female": "Female", "f": "Female", "nu": "Female", "nữ": "Female",
+    "female": "Female", "f": "Female", "nu": "Female",
 }
 
 
@@ -130,6 +139,10 @@ def clean_gender(v):
     return GENDER_MAP.get(key, "")
 
 
+# ---------------------------------------------------------------------------
+# SỬA TỈNH/THÀNH: nhiều cách viết (HCMC, TP.HCM, hcm...) -> 1 tên chuẩn.
+# Giá trị giả (-, N/A) -> rỗng.
+# ---------------------------------------------------------------------------
 PROVINCE_MAP = {}
 
 
@@ -154,6 +167,10 @@ def clean_province(v):
     return PROVINCE_MAP.get(key, (v or "").strip())
 
 
+# ---------------------------------------------------------------------------
+# SỬA TRẠNG THÁI ĐƠN: 14 cách viết -> Pending / Processing / Completed / Cancelled.
+# "In Progress" gộp vào "Processing" vì cùng ý nghĩa nghiệp vụ.
+# ---------------------------------------------------------------------------
 STATUS_MAP = {
     "pending": "Pending",
     "processing": "Processing",
@@ -171,9 +188,10 @@ def clean_status(v):
     return STATUS_MAP.get(key, (v or "").strip())
 
 
-CATEGORY_MAP = {}
-
-
+# ---------------------------------------------------------------------------
+# SỬA DANH MỤC SẢN PHẨM: bỏ khoảng trắng thừa, so khớp không phân biệt hoa thường
+# với danh sách tên chuẩn (" Sports ", "SPORTS" -> "Sports").
+# ---------------------------------------------------------------------------
 def clean_category(v, known_categories):
     key = (v or "").strip().lower()
     for c in known_categories:
@@ -182,6 +200,10 @@ def clean_category(v, known_categories):
     return (v or "").strip().title()
 
 
+# ---------------------------------------------------------------------------
+# CHUYỂN SỐ: không chuyển được thì trả về None để bước sau quyết định cách ly.
+# to_int chỉ nhận số nguyên (2.0 được, 2.5 thì không).
+# ---------------------------------------------------------------------------
 def to_float(v):
     try:
         return float(v)

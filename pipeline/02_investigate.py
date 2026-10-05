@@ -1,16 +1,15 @@
-"""Deeper investigation into specific anomalies found during profiling."""
-import csv
+"""
+Bước 2: điều tra sâu các bất thường tìm thấy ở bước 1, in kết quả ra màn hình.
+
+Chạy: python3 02_investigate.py
+Mục đích: quyết định cách xử lý dựa trên bằng chứng, ví dụ dòng trùng là trùng
+hoàn toàn hay mâu thuẫn, ngày nào đọc được 2 cách, khoảng ngày có hợp lý không.
+"""
 import re
 from collections import Counter
 from datetime import datetime
-from pathlib import Path
 
-RAW = Path(__file__).parent / "raw"
-
-
-def load(name):
-    with open(RAW / name, newline="", encoding="utf-8-sig") as f:
-        return list(csv.DictReader(f))
+from common import TODAY, load
 
 
 def section(title):
@@ -23,6 +22,7 @@ customers = load("customers.csv")
 orders = load("orders.csv")
 order_items = load("order_items.csv")
 
+# --- Khách trùng mã: trùng hoàn toàn (xoá được) hay khác nội dung (không được xoá)? ---
 section("Duplicate customer_id rows — are they exact dupes or conflicting?")
 by_id = {}
 for r in customers:
@@ -33,8 +33,9 @@ for cid, rows in by_id.items():
         for r in rows:
             print(f"   {r}")
 
+# --- Ngày sinh không đọc được, ở tương lai, quá già hoặc dưới 5 tuổi ---
 section("birth_date sanity: parse both formats, check range")
-today = datetime(2026, 9, 21)
+today = TODAY
 bad_birth = []
 for r in customers:
     v = r["birth_date"].strip()
@@ -57,6 +58,7 @@ print(f"birth_date issues: {len(bad_birth)}")
 for b in bad_birth[:30]:
     print(f"  {b}")
 
+# --- Đếm ngày chỉ đọc được 1 cách (một số > 12) và ngày đọc được 2 cách (cả hai <= 12) ---
 section("MM/DD/YYYY vs DD/MM/YYYY ambiguity check (day>12 disambiguates)")
 ambiguous = Counter()
 for r in customers:
@@ -89,6 +91,7 @@ for r in orders:
             ambiguous["order:both>12 invalid"] += 1
 print(ambiguous)
 
+# --- Đơn trùng mã hoặc thiếu mã ---
 section("Duplicate/blank order_id rows in orders.csv")
 by_oid = {}
 for r in orders:
@@ -99,6 +102,7 @@ for oid, rows in by_oid.items():
         for r in rows:
             print(f"   {r}")
 
+# --- Khoảng ngày đăng ký và ngày đặt hàng ---
 section("registration_date vs birth_date / order_date range")
 reg_dates = [r["registration_date"] for r in customers]
 print("min/max registration_date:", min(reg_dates), max(reg_dates))
@@ -113,6 +117,7 @@ for r in orders:
             continue
 print("order_date range:", min(order_dates_iso), max(order_dates_iso))
 
+# --- Mẫu các dòng thiếu email hoặc tỉnh ---
 section("Sample rows with missing email/province")
 for r in customers:
     if not r["email"].strip() or not r["province"].strip():

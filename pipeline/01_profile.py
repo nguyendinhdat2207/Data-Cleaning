@@ -1,25 +1,14 @@
 """
-Data profiling script (pure stdlib, no pandas).
-Reads raw CSVs and prints a profiling report to stdout, covering:
-- row counts, column names
-- missing value counts per column
-- duplicate keys
-- distinct value samples for categorical-looking columns
-- format variants (dates, phone, email, gender, status, province)
-- referential integrity checks
-- numeric sanity checks (price, quantity, total_amount)
+Bước 1: khảo sát (profiling) dữ liệu thô, in kết quả ra màn hình.
+
+Chạy: python3 01_profile.py
+Nội dung: số dòng, ô rỗng, khoá trùng, các cách viết của cột phân loại,
+định dạng ngày/điện thoại/email, khoá ngoại, giá trị số bất thường.
 """
-import csv
 import re
 from collections import Counter, defaultdict
-from pathlib import Path
 
-RAW = Path(__file__).parent / "raw"
-
-
-def load(name):
-    with open(RAW / name, newline="", encoding="utf-8-sig") as f:
-        return list(csv.DictReader(f))
+from common import load
 
 
 def pct(n, total):
@@ -44,7 +33,7 @@ def show_counter(counter, label, top=30):
         print(f"    {val!r:30s} {cnt}")
 
 
-# ---------------------------------------------------------------------------
+# --- Khảo sát customers: rỗng, trùng khoá, giới tính, ngày sinh, email, điện thoại, tỉnh ---
 customers = load("customers.csv")
 products = load("products.csv")
 orders = load("orders.csv")
@@ -97,6 +86,7 @@ show_counter(Counter(r["province"].strip() for r in customers), "province values
 reg_date_bad = [r["registration_date"] for r in customers if r["registration_date"].strip() and not re.match(r"^\d{4}-\d{2}-\d{2}$", r["registration_date"].strip())]
 print(f"  registration_date not YYYY-MM-DD: {len(reg_date_bad)} e.g. {reg_date_bad[:5]}")
 
+# --- Khảo sát products: trùng khoá, danh mục, giá <= 0 ---
 section(f"PRODUCTS: {len(products)} rows, cols={list(products[0].keys())}")
 profile_missing(products, products[0].keys(), len(products))
 pids = [r["product_id"] for r in products]
@@ -116,6 +106,7 @@ for r in products:
             price_bad.append((r["product_id"], v))
 print(f"  price <=0 or non-numeric: {price_bad}")
 
+# --- Khảo sát orders: trùng khoá, trạng thái, định dạng ngày, khoá ngoại tới customers ---
 section(f"ORDERS: {len(orders)} rows, cols={list(orders[0].keys())}")
 profile_missing(orders, orders[0].keys(), len(orders))
 oids = [r["order_id"] for r in orders]
@@ -153,6 +144,7 @@ for r in orders:
             total_amount_bad.append((r["order_id"], v))
 print(f"  total_amount negative/non-numeric: {total_amount_bad}")
 
+# --- Khảo sát order_items: khoá ngoại, số lượng, đơn giá, cặp (order_id, product_id) trùng ---
 section(f"ORDER_ITEMS: {len(order_items)} rows, cols={list(order_items[0].keys())}")
 profile_missing(order_items, order_items[0].keys(), len(order_items))
 
@@ -190,6 +182,7 @@ dup_oi = Counter((r["order_id"], r["product_id"]) for r in order_items)
 dup_oi_list = [k for k, v in dup_oi.items() if v > 1]
 print(f"  duplicate (order_id, product_id) pairs in order_items: {len(dup_oi_list)} e.g. {dup_oi_list[:10]}")
 
+# --- Kiểm tra chéo: total_amount so với tổng quantity × unit_price ---
 section("CROSS-CHECK: total_amount vs sum(order_items)")
 sums = defaultdict(float)
 for r in order_items:
